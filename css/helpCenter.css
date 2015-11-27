@@ -1,0 +1,94 @@
+/* 
+ Copyright @ WWW.OCTMAMI.COM 
+ Help Center
+*/
+.main {
+	overflow:hidden;
+	*zoom:1
+}
+.font{
+	font-family:"microsoft yahei";
+}
+/*左侧栏*/
+.left_side_box {
+    float: left;
+    width: 187px;
+    margin-right: 10px;
+    font-family:"microsoft yahei";
+}
+.left_menu_box{
+	width: 185px;
+	border: 1px solid #f5f5f5;
+}
+.left_menu_title{
+	height: 40px;
+	line-height: 40px;
+	background: #f5f5f5;
+	color: #666;
+	padding: 0 15px;
+	font-size: 14px;
+	border-bottom: 1px solid #e1e1e1;
+	cursor: pointer;
+	position: relative;
+}
+.left_menu_title:hover{
+	background: #eee;
+}
+.icon_lm_arrow{
+	border-style:solid dashed solid dashed;
+	border-color:#b5b5b5 transparent #b5b5b5 transparent;
+	border-width:5px 5px 0;
+	position:absolute;
+	top:18px;
+	right:16px;
+	font-size:0;
+	line-height:0;
+	height:0;
+	overflow:hidden;
+}
+.left_menu_set.open .left_menu_content{
+	display: block;
+}
+.left_menu_set.open .icon_lm_arrow {
+	border-width:0 5px 5px;
+}
+.left_menu_content{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #f5f5f5;
+	font-size: 12px;
+	padding: 0 15px;
+	overflow: hidden;
+	display: none;
+}
+.left_menu_link{
+	color: #666;
+	display: block;
+}
+.left_menu_content.current .left_menu_link{
+	color:#27b484;
+}
+/*左侧栏*/
+/*右侧内容栏*/
+.right_content {
+    width: 1013px;
+    float: left;
+    background-color: #FFF;
+    min-height: 600px;
+}
+.right_content_set{
+	border: 1px solid #e5e5e5;
+	min-height: 400px;
+}
+.right_content_title{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	background: #f5f5f5;
+	border-bottom: 1px solid #e5e5e5;
+	padding-left: 16px;
+}
+.right_contxt{
+	padding: 20px 30px 15px;
+	line-height: 22px;
+}

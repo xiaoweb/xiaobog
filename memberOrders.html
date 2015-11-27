@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <meta name="author" content="mall.octmami.com">
+    <meta name="copyright" content="Copyright ©www.octmami.com 版权所有">
+    <meta name="revisit-after" content="1 days">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=0.23, minimum-scale=0, user-scalable=no">
+    <title>十月商城-十月妈咪官方商城_中国首家品牌联盟孕婴童商城</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/member.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/list_slide-min.js"></script>
+</head>
+<body>
+<!--top-->
+<!--head-->
+<!--nav-->
+<!--member-->
+<div class="wd main">
+    <div class="mb_bread_crumbs mb10">
+        您当前的位置：<span class="mb_bread_crumbs_kw"><a href="member.html">会员中心</a></span>
+        <span>»</span>
+        <span class="now">我的订单</span>
+    </div>
+    <!--左侧栏-->
+    <div class="mb_left_side_box">
+        <div class="mb_left_menu_box">
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    交易管理
+                </dt>
+                <dd class="mb_left_menu_content current">
+                    <a href="memberOrders.html" class="mb_left_menu_link">我的订单</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberNodiscuss.html" class="mb_left_menu_link">申请退换货</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    评论咨询管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">未评论商品</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">评论与咨询</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    我的账户
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberFav.html" class="mb_left_menu_link">商品收藏</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">到货通知</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的优惠券</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">积分兑换优惠券</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的花生</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set last">
+                <dt class="mb_left_menu_title">
+                    个人信息管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">站内信</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberInfo.html" class="mb_left_menu_link">个人信息</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">安全中心</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">收货地址</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--左侧栏-->
+    <!--右侧主区域-->
+    <div class="mb_right_content">
+        <!--订单-->
+        <div class="member_orders_nbox mb10">
+            <div class="member_orders_box_label_s font">
+                <a href="javascript:void(0)" class="orders_status_menu current" orderStatus="0">全部订单<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="1">待付款<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="2">待发货<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="3">待收货<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="4">待评价<div class="icn_mem_infor_number">1</div></a>
+            </div>
+            <!--订单为空时 member_orders_empty_box替代member_orders_set-->
+            <div class="empty_box">
+                <div class="empty_icon"></div>
+                <div class="empty_words_b font">没有待付款的订单哦~</div>
+                <a href="memberFav.html" class="bt_26_green mr10">我的收藏</a>
+                <a href="index.html" class="bt_26_orange">去首页逛逛</a>
+            </div>
+            <!--订单为空时 member_orders_empty_box替代member_orders_set-->
+            <div class="member_orders_set">
+                <table class="member_orders_main" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="500">订单详情</th>
+                            <th width="130">金额</th>
+                            <th>订单状态</th>
+                            <th width="127">支付方式</th>
+                            <th width="106">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="member_orders_em_row">
+                            <td colspan="5"></td>
+                        </tr>
+                        <tr class="member_orders_title_row">
+                            <td colspan="5">
+                                <span class="member_orders_title_sp">订单号：<a href="" target="_blank">2015080555985652</a></span>
+                                <span class="member_orders_title_sp">下单时间：2015-07-20 13:49:12</span>
+                            </td>
+                        </tr>
+                        <tr class="member_orders_content_row">
+                            <td width="500">
+                                <div class="member_orders_good_item">
+                                    <a href="" class="member_order_good_link">
+                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
+                                        <div class="member_orders_good_m">
+                                            <p class="member_orders_good_name">十月妈咪 孕妇装夏装2015韩版连衣裙短袖春装圆领连衣裙条纹上衣</p> 
+                                            <p class="member_orders_good_info">尺码：M  颜色：绿色</p>
+                                        </div>
+                                    </a>
+                                    <span class="member_order_good_num">x1</span>
+                                </div>
+                            </td>
+                            <!--几个商品 rowspan为几-->
+                            <td width="130" rowspan="3">￥1980.00</td>
+                            <td rowspan="3">待付款</td>
+                            <td width="127" rowspan="3">支付宝</td>
+                            <td width="96" rowspan="3">
+                                <div class="member_order_good_oper">
+                                    <a href="">查看订单</a>
+                                    <!--a href="" class="member_orders_bt_pay">付款</a-->
+                                    <a href="">再次购买</a>
+                                    <a href="">删除订单</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="member_orders_content_row">
+                            <td width="500">
+                                <div class="member_orders_good_item">
+                                    <a href="" class="member_order_good_link">
+                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
+                                        <div class="member_orders_good_m">
+                                            <p class="member_orders_good_name">十月妈咪 孕妇装夏装2015韩版连衣裙短袖春装圆领连衣裙条纹上衣</p> 
+                                            <p class="member_orders_good_info">尺码：M  颜色：绿色</p>
+                                        </div>
+                                    </a>
+                                    <span class="member_order_good_num">x1</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="member_orders_content_row">
+                            <td width="500">
+                                <div class="member_orders_good_item">
+                                    <a href="" class="member_order_good_link">
+                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
+                                        <div class="member_orders_good_m">
+                                            <p class="member_orders_good_name">十月妈咪 孕妇装夏装2015韩版连衣裙短袖春装圆领连衣裙条纹上衣</p> 
+                                            <p class="member_orders_good_info">尺码：M  颜色：绿色</p>
+                                        </div>
+                                    </a>
+                                    <span class="member_order_good_num">x1</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="member_orders_em_row">
+                            <td colspan="5"></td>
+                        </tr>
+                        <tr class="member_orders_title_row">
+                            <td colspan="5">
+                                <span class="member_orders_title_sp">订单号：<a href="" target="_blank">2015080555985652</a></span>
+                                <span class="member_orders_title_sp">下单时间：2015-07-20 13:49:12</span>
+                            </td>
+                        </tr>
+                        <tr class="member_orders_content_row">
+                            <td width="500">
+                                <div class="member_orders_good_item">
+                                    <a href="" class="member_order_good_link">
+                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
+                                        <div class="member_orders_good_m">
+                                            <p class="member_orders_good_name">十月妈咪 孕妇装夏装2015韩版连衣裙短袖春装圆领连衣裙条纹上衣</p> 
+                                            <p class="member_orders_good_info">尺码：M  颜色：绿色</p>
+                                        </div>
+                                    </a>
+                                    <span class="member_order_good_num">x1</span>
+                                </div>
+                            </td>
+                            <!--几个商品 rowspan为几-->
+                            <td width="130" rowspan="2">￥1980.00</td>
+                            <td rowspan="2">待付款</td>
+                            <td width="127" rowspan="2">支付宝</td>
+                            <td width="96" rowspan="2">
+                                <div class="member_order_good_oper">
+                                    <a href="">查看订单</a>
+                                    <a href="" class="member_orders_bt_pay">付款</a>
+                                    <!--a href="">再次购买</a-->
+                                    <a href="">删除订单</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="member_orders_content_row">
+                            <td width="500">
+                                <div class="member_orders_good_item">
+                                    <a href="" class="member_order_good_link">
+                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
+                                        <div class="member_orders_good_m">
+                                            <p class="member_orders_good_name">十月妈咪 孕妇装夏装2015韩版连衣裙短袖春装圆领连衣裙条纹上衣</p> 
+                                            <p class="member_orders_good_info">尺码：M  颜色：绿色</p>
+                                        </div>
+                                    </a>
+                                    <span class="member_order_good_num">x1</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--翻页条-->
+            <div class="clearfix">
+                <div class="bt_page_set mt15 mb15">
+                    <a class="bt_page disable">
+                        上一页
+                        <b>
+                        </b>
+                    </a>
+                    <a class="bt_page current" href="">
+                        1
+                    </a>
+                    <a class="bt_page" href="">
+                        2
+                    </a>
+                    <a class="bt_page" href="">
+                        3
+                    </a>
+                    <span>
+                        ...
+                    </span>
+                    <a class="bt_page" href="">
+                        14
+                    </a>
+                    <a class="bt_page" href="">
+                        下一页
+                        <b>
+                        </b>
+                    </a>
+                </div>
+            </div>
+            <!--翻页条-->
+        </div>
+        <!--订单-->
+        <!--广告-->
+        <div>
+            <a href=""><img src="images/pic_help_center_adv_01.jpg" width="1013" /></a>
+        </div>
+        <!--广告-->
+    </div>
+    <!--右侧主区域-->
+</div>
+<!--member-->
+<script type="text/javascript">
+$('.orders_status_menu').on("click",
+    function() {
+      var orderStatus = $(this).attr("orderStatus");
+      if (!$(this).hasClass("current")) {
+        $(".orders_status_menu").removeClass("current");
+        $(this).addClass("current");
+        $.post(
+            '#',
+            {'orderStatus ':orderStatus},
+            function (result) {
+                $('.member_orders_main').html(result.xxx);
+            },'json'
+        );
+    }
+});
+</script>
+</body>
+</html>

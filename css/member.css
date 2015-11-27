@@ -1,0 +1,446 @@
+/* 
+ Copyright @ WWW.OCTMAMI.COM 
+ Member
+*/
+.main {
+	overflow:hidden;
+	*zoom:1
+}
+.font{
+	font-family:"microsoft yahei";
+}
+.mb_bread_crumbs{
+	height: 20px;
+	line-height: 20px;
+	color: #999;
+}
+.mb_bread_crumbs_kw{
+	color: #333;
+}
+
+/*左侧栏*/
+.mb_left_side_box {
+    float: left;
+    width: 187px;
+    margin-right: 10px;
+    font-family:"microsoft yahei";
+}
+.mb_left_menu_box{
+	background: #f5f5f5;
+	padding: 0 15px;
+}
+.mb_left_menu_set{
+	padding: 6px 0 10px;
+	border-bottom: 1px solid #e1e1e1;
+}
+.mb_left_menu_set.last{
+	border-bottom: none;
+}
+.mb_left_menu_title{
+	height: 40px;
+	line-height: 42px;
+	background: #f5f5f5;
+	color: #333;
+	font-size: 16px;
+	position: relative;
+}
+.mb_left_menu_content{
+	line-height: 29px;
+}
+.mb_left_menu_content.current .mb_left_menu_link{
+	color:#27b484;
+}
+/*右侧内容栏*/
+.mb_right_content {
+    width: 1013px;
+    float: left;
+    background-color: #FFF;
+    min-height: 600px;
+}
+.member_welcome_set{
+	border: 1px solid #e5e5e5;
+	min-height: 130px;
+}
+.member_welcome_content{
+	height: 68px;
+	background: #f6f6f6;
+	padding: 7px 0 7px 20px;
+}
+.member_welcome_mem_pic{
+	float: left;
+	width: 68px;
+	height: 68px;
+}
+.member_welcome_mem_pic img{
+	width: 68px;
+	height: 68px;
+}
+.member_welcome_info_set{
+	width: 912px;
+	float: right;
+	height: 68px;
+	overflow: hidden;
+}
+.member_welcome_info_set ul{
+	padding: 10px 0;
+}
+.member_welcome_info_set li{
+	width: 152px;
+	float: left;
+	overflow: hidden;
+}
+.member_welcome_info_set .member_name{
+	height: 24px;
+	line-height: 24px;
+}
+.member_welcome_info_set .member_infor{
+	line-height: 48px;
+	height: 48px;
+	position: relative;
+}
+.member_welcome_alart{
+	height: 24px;
+	line-height: 24px;
+	margin:12px auto;
+	text-align: center;
+}
+.member_welcome_alart a{
+	display: inline-block;
+	width: 24%;
+	border-right: 1px solid #e5e5e5;
+	position: relative;
+}
+.member_welcome_alart a.last{
+	border-right: none;
+}
+.member_orders_box{
+	border: 1px solid #e5e5e5;
+	min-height: 295px;
+	padding: 0 16px;
+}
+.member_orders_box_label{
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.member_orders_box_label_s{
+	height: 40px;
+	line-height: 32px;
+	font-size: 16px;
+}
+.member_orders_em_row{
+	height: 10px;
+}
+.member_orders_title_row td{
+	background: #F6f6f6;
+	height: 32px;
+	line-height: 32px;
+	color: #aaa;
+	padding: 0;
+	overflow: hidden;
+	text-align: left;
+}
+.member_orders_title_sp{
+	margin:0 12px 0 16px;
+}
+.member_label_rt_menu{
+	font-size: 12px;
+}
+.empty_box{
+	min-height: 290px;
+	text-align: center;
+	padding-top: 120px;
+}
+.empty_icon{
+	width: 60px;
+	height: 60px;
+	background: url(../images/v2.0_icon.png?v=1.0.1) -400px 0 no-repeat;
+	margin: 0 auto;
+}
+.cart_empty_icon{
+	width: 60px;
+	height: 60px;
+	background: url(../images/v2.0_icon.png?v=1.0.1) -480px 0 no-repeat;
+	margin: 0 auto;
+}
+.empty_words_b{
+	font-size: 16px;
+	line-height: 45px;
+}
+.member_orders_main{
+	border-collapse: collapse;
+}
+.member_orders_main th{
+	height: 35px;
+	line-height: 35px;
+	font-size: 12px;
+	font-weight: 300;
+	background: #f6f6f6;
+}
+.member_orders_title_row td , .member_orders_content_row td{
+	border: 1px solid #e5e5e5;
+}
+.member_orders_content_row td{
+	padding: 13px 0;
+	text-align: center;
+	vertical-align: top;
+	line-height: 22px;
+}
+.member_nodiscuss_content_row td{
+	padding: 13px 0;
+	text-align: center;
+	vertical-align: top;
+	line-height: 22px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.member_order_good_link{
+	display: inline-block;
+}
+.member_good_item{
+	width: 500px;
+	height: 78px;
+	overflow: hidden;
+}
+.member_orders_good_img{
+	margin-left: 15px;
+	width: 76px;
+	height: 76px;
+	border: 1px solid #e5e5e5;
+	float: left;
+}
+.member_orders_good_item{
+	line-height: 22px;
+	height: 78px;
+	text-align: left;
+}
+.member_orders_good_m{
+	width: 260px;
+	float: left;
+	margin: 0 25px 0 15px;
+}
+.member_nodiscuss_good_m{
+	width: 360px;
+	float: left;
+	margin: 0 25px 0 15px;
+}
+.member_orders_good_name{
+	height: 44px;
+	overflow: hidden;
+    margin-bottom: 5px;
+}
+.member_orders_good_info{
+	color: #aaa;
+	height: 22px;
+	overflow: hidden;
+}
+.member_order_good_num{
+	width: 90px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	color: #aaa;
+}
+.member_order_good_oper a{
+	line-height: 22px;
+	display: block;
+}
+/*
+.member_orders_box td{
+	text-align: center;
+	padding: 10px 0 15px;
+	border-bottom: 1px solid #e5e5e5;
+	vertical-align: top;
+	line-height: 25px;
+}
+
+.member_orders_box tr:last-child td , .member_orders_box tr.last td{
+	border-bottom: none;
+}
+*/
+.member_orders_nbox{
+	min-height: 295px;
+	margin-left: 1px;
+}
+td.member_orders_box_img{
+	text-align: left;
+}
+.member_orders_box_img img{
+	margin:3px 5px 0;
+}
+.member_orders_bt_pay{
+	background: #ff6600;
+	color: #fff;
+	padding: 2px 3px;
+	margin: 3px 18px;
+	width: 68px;
+	height: 22px;
+	overflow: hidden;
+	border-radius: 2px;
+}
+.member_orders_bt_pay:hover{
+	background: #cc6600;
+	color: #fff;
+}
+.member_orders_bt_green{
+	background: #27B484;
+	color: #fff;
+	padding: 2px 3px;
+	margin: 3px 18px;
+	width: 68px;
+	height: 22px;
+	overflow: hidden;
+	border-radius: 2px;
+}
+.member_orders_bt_green:hover{
+	background: #009c67;
+	color: #fff;
+}
+.member_fav_set{
+	width: 976px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.member_fav_item{
+	width: 180px;
+	margin: 7px;
+	float: left;
+}
+.member_fav_pic{
+	width: 180px;
+	height: 180px;
+	margin-bottom: 5px;
+}
+.member_fav_name{
+	line-height: 22px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.member_fav_price{
+	font-size: 15px;
+	font-family: verdana;
+}
+/*会员信息*/
+.member_info_title_set{
+	height: 35px;
+	line-height: 35px;
+	background: #F6F6F6;
+}
+.member_info_title{
+	font-size: 14px;
+	color: #27B484;
+	padding : 0 8px;
+}
+.member_info_remark{
+	padding-left: 10px;
+	border-left: 1px solid #999;
+	color: #999;
+}
+.member_info_pic_set{
+	width: 108px;
+	height: 108px;
+	border: 5px solid #e3e3e3;
+	border-radius: 57px;
+	overflow: hidden;
+	position: relative;
+	margin-left: 8px;
+}
+.member_info_pic_bt a{
+	width: 108px;
+	height: 26px;
+	line-height: 24px;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	background: #333;
+	filter:alpha(opacity=50);
+	opacity: 0.5;
+}
+.member_info_pic_bt:hover a{
+	color: #fff;
+	filter:alpha(opacity=70);
+	opacity: 0.7;
+}
+.member_info_item{
+	height: 50px;
+	overflow: hidden;
+}
+.member_info_label{
+	width: 126px;
+	text-align: right;
+	float: left;
+	line-height: 30px;
+	margin: 11px 0;
+}
+.member_info_input_label{
+	line-height: 30px;
+	vertical-align: middle;
+}
+.member_info_label_star{
+	color: #e12228;
+}
+.member_info_input_set{
+	position: relative;
+	height: 30px;
+	margin: 11px 0;
+	display: inline-block;
+	line-height: 30px;
+}
+.member_info_input{
+	width: 200px;
+	height: 28px;
+	line-height: 28px;
+	border:1px solid #ccc;
+	padding: 0;
+}
+.member_info_item select{
+	line-height: 18px;
+	border: 1px solid #CCC;
+	padding: 4px;
+	float: none;
+}
+/*会员信息*/
+/*收藏夹*/
+.member_action_bt_set{
+	margin: 6px 0px;
+}
+.member_action_bt{
+	display: inline-block;
+	height: 20px;
+	line-height: 18px;
+	padding: 1px 5px 0px;
+	vertical-align: middle;
+	margin-right: 2px;
+	border: 1px solid #E2E2E2;
+	color: #333;
+	font-size: 12px;
+	border-radius: 1px;
+	background-color: #F7F7F7;
+}
+.member_action_bt:hover{
+	border-color :#27b484;
+}
+.member_action_bt.disable{
+	color: #bbb;
+}
+.member_action_bt.disable:hover{
+	color: #bbb;
+	border-color :#E2E2E2;
+}
+/*我的订单*/
+.orders_status_menu{
+	display: inline-block;
+	color: #333;
+	font-size: 12px;
+	margin-left: 3px;
+	margin-right: 40px;
+	position: relative;
+	line-height: 24px;
+}
+.orders_status_menu.current{
+	color: #27b484;
+	font-weight: 700;
+	border-bottom: 2px solid #27b484;
+}
