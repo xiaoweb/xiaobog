@@ -53,10 +53,10 @@
                     评论咨询管理
                 </dt>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">未评论商品</a>
+                    <a href="memberNoCmt.html" class="mb_left_menu_link">未评论商品</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">评论与咨询</a>
+                    <a href="memberMyCmt.html" class="mb_left_menu_link">评论与咨询</a>
                 </dd>
             </dl>
             <dl class="mb_left_menu_set">
@@ -65,9 +65,6 @@
                 </dt>
                 <dd class="mb_left_menu_content">
                     <a href="memberFav.html" class="mb_left_menu_link">商品收藏</a>
-                </dd>
-                <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">到货通知</a>
                 </dd>
                 <dd class="mb_left_menu_content">
                     <a href="" class="mb_left_menu_link">我的优惠券</a>
@@ -84,7 +81,7 @@
                     个人信息管理
                 </dt>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">站内信</a>
+                    <a href="" class="mb_left_menu_link">我的消息</a>
                 </dd>
                 <dd class="mb_left_menu_content current">
                     <a href="memberInfo.html" class="mb_left_menu_link">个人信息</a>
@@ -103,7 +100,7 @@
     <div class="mb_right_content">
         <!--会员信息-->
         <div class="member_orders_box mb10">
-            <div class="member_info_title_set mt15 mb15">
+            <div class="member_info_title_set mb10">
                 <span class="member_info_title font">个人信息</span>
                 <span class="member_info_remark font">请尽量完整填写您的个人信息，方便店家与您联系。</span>
             </div>
@@ -123,7 +120,10 @@
                     </div>
                     <div class="member_info_item">
                         <label class="member_info_label">性别：</label>
-                        <span class="member_info_input_set"><input class="member_info_input" name="" value="" type="text"></span>
+                        <span class="member_info_input_set">
+                            <input name="sex" value="0" type="radio" checked="checked"><label class="member_info_input_label">女</label>
+                            <input name="sex" value="1" type="radio"><label class="member_info_input_label">男</label>
+                        </span>
                     </div>
                     <div class="member_info_item">
                         <label class="member_info_label">生日：</label>
@@ -250,7 +250,7 @@
                     <div class="member_info_item">
                         <label class="member_info_label"></label>
                         <span class="member_info_input_set">
-                            <input type="button" id="bt_login" class="bt_30_green font" onclick="" value="保 存">
+                            <a class="bt_30_green font" onclick="" href="">保&nbsp;&nbsp;存</a>
                         </span>
                     </div>
                 </form>

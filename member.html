@@ -21,17 +21,75 @@
     <link rel="stylesheet" href="css/member.css"/>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/lazyload.js"></script>
-    <script src="js/list_slide-min.js"></script>
 </head>
 <body>
 <!--top-->
-<!--head-->
-<!--nav-->
+<!--会员模块 除登录注册页外 调用此头部-->
+<div class="top">
+    <div class="wd">
+        <div class="left">
+            <span>欢迎来到十月妈咪</span>
+        </div>
+        <div class="right">
+            <a href="login.html" class="login">登录</a>|
+            <a href="regist.html">注册</a>
+            <a href="#">我的订单</a>
+            <a href="http://m.octmami.com" class="m_shop">手机商城</a>
+            <a href="#" id="attention">关注商城<div class="qrcodeShow"></div></a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>
+        <!--login-->
+        <!--<div class="right">
+            <a href="#">你好，13111111111</a>
+            <a href="#">[退出]</a>
+            <a href="#">我的订单</a>
+            <a href="#" class="m_shop">手机商城</a>
+            <a href="#">关注商城</a>
+            <a target="_blank" href="#">防伪查询</a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>-->
+    </div>
+</div>
+<!--top-->
+<!--memberNav-->
+<div class="member_nav_set">
+    <div class="wd">
+        <div class="member_logo">
+            <a class="member_logo_link" href="index.html"></a>
+        </div>
+        <div class="member_nav_menu_set font">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="member.html">我的十月</a></li>
+                <li><a href="sales.html">十月闪购</a></li>
+                <li><a href="star.html">明星推荐</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <div class="cat rela">
+                <a target="_blank" href="#"><div class="content"><i class="member_cart_icon"></i>我的购物车<span>&gt;</span></div></a>
+                <div class="member_cart_number ajax_cart_number">3</div>
+            </div>
+            <div class="member_serverSlg_set">
+                <ul>
+                    <li>
+                        <a class="unit_1" href=""></a>
+                    </li>
+                    <li>
+                        <a class="unit_2" href=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--memberNav-->
 <!--member-->
 <div class="wd main">
-    <div class="mb_bread_crumbs mb10">
-        您当前的位置：<span class="mb_bread_crumbs_kw">会员中心</span>
-    </div>
     <!--左侧栏-->
     <div class="mb_left_side_box">
         <div class="mb_left_menu_box">
@@ -51,10 +109,10 @@
                     评论咨询管理
                 </dt>
                 <dd class="mb_left_menu_content">
-                    <a href="memberNodiscuss.html" class="mb_left_menu_link">未评论商品</a>
+                    <a href="memberNoCmt.html" class="mb_left_menu_link">未评论商品</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">评论与咨询</a>
+                    <a href="memberMyCmt.html" class="mb_left_menu_link">评论与咨询</a>
                 </dd>
             </dl>
             <dl class="mb_left_menu_set">
@@ -65,13 +123,10 @@
                     <a href="memberFav.html" class="mb_left_menu_link">商品收藏</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">到货通知</a>
-                </dd>
-                <dd class="mb_left_menu_content">
                     <a href="" class="mb_left_menu_link">我的优惠券</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">积分兑换优惠券</a>
+                    <a href="couponExchange.html" class="mb_left_menu_link">积分兑换优惠券</a>
                 </dd>
                 <dd class="mb_left_menu_content">
                     <a href="" class="mb_left_menu_link">我的花生</a>
@@ -82,13 +137,14 @@
                     个人信息管理
                 </dt>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">站内信</a>
+                    <a href="myInfo.html" class="mb_left_menu_link">我的消息</a>
+                    <i>(4)</i>
                 </dd>
                 <dd class="mb_left_menu_content">
                     <a href="memberInfo.html" class="mb_left_menu_link">个人信息</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">安全中心</a>
+                    <a href="safeCenter.html" class="mb_left_menu_link">安全中心</a>
                 </dd>
                 <dd class="mb_left_menu_content">
                     <a href="" class="mb_left_menu_link">收货地址</a>
@@ -132,7 +188,7 @@
                         </li> 
                         <li>
                             <div class="member_infor">
-                                <a href="">站内信</a>
+                                <a href="">我的消息</a>
                                 <div class="icn_cart_infor_number">1</div>
                             </div>
                         </li> 
@@ -153,7 +209,7 @@
         </div>
         <!--会员信息区域-->
         <!--近期订单-->
-        <div class="member_orders_nbox mb10">
+        <div class="member_orders_nbox mb15">
             <div class="member_orders_box_label font">
                 <div class="fl">最近的订单</div>
                 <div class="fr">
@@ -164,16 +220,18 @@
             <div class="empty_box">
                 <div class="empty_icon"></div>
                 <div class="empty_words_b font">没有待付款的订单哦~</div>
-                <a href="index.html" class="bt_26_orange">去首页逛逛</a>
+                <div class="empty_words_link">您还可以：
+                    <a href="index.html" class="font_green">去首页逛逛</a>
+                </div>
             </div>
             <!--订单为空时 member_orders_empty_box替代member_orders_set-->
             <div class="member_orders_set_brief">
-                <table class="member_orders_main mb15" width="100%">
+                <table class="member_orders_main" width="100%">
                     <thead>
                         <tr>
                             <th width="500">订单详情</th>
                             <th width="130">金额</th>
-                            <th>订单状态</th>
+                            <th width="127">订单状态</th>
                             <th width="127">支付方式</th>
                             <th width="106">操作</th>
                         </tr>
@@ -191,24 +249,22 @@
                         <tr class="member_orders_content_row">
                             <td width="500">
                                 <div class="member_good_item">
-                                    <a>
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                    </a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
                                 </div>
                             </td>
                             <!--几个商品 rowspan为几-->
                             <td width="130">￥1980.00</td>
-                            <td>待付款</td>
+                            <td width="127">待付款</td>
                             <td width="127">支付宝</td>
-                            <td width="96">
+                            <td>
                                 <div class="member_order_good_oper">
                                     <a href="">查看订单</a>
                                     <!--a href="" class="member_orders_bt_pay">付款</a-->
-                                    <a href="">再次购买</a>
+                                    <a class="member_orders_bt_green" href="">再次购买</a>
                                     <a href="">删除订单</a>
                                 </div>
                             </td>
@@ -222,24 +278,22 @@
                         <tr class="member_orders_content_row">
                             <td width="500">
                                 <div class="member_good_item">
-                                    <a>
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                    </a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
                                 </div>
                             </td>
                             <!--几个商品 rowspan为几-->
                             <td width="130">￥1980.00</td>
-                            <td>待付款</td>
+                            <td width="127">待付款</td>
                             <td width="127">支付宝</td>
-                            <td width="96">
+                            <td>
                                 <div class="member_order_good_oper">
                                     <a href="">查看订单</a>
                                     <!--a href="" class="member_orders_bt_pay">付款</a-->
-                                    <a href="">再次购买</a>
+                                    <a class="member_orders_bt_green" href="">再次购买</a>
                                     <a href="">删除订单</a>
                                 </div>
                             </td>
@@ -253,24 +307,22 @@
                         <tr class="member_orders_content_row">
                             <td width="500">
                                 <div class="member_good_item">
-                                    <a>
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                        <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
-                                    </a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
+                                    <a href=""><img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" /></a>
                                 </div>
                             </td>
                             <!--几个商品 rowspan为几-->
                             <td width="130">￥1980.00</td>
-                            <td>待付款</td>
+                            <td width="127">待付款</td>
                             <td width="127">支付宝</td>
-                            <td width="96">
+                            <td>
                                 <div class="member_order_good_oper">
                                     <a href="">查看订单</a>
                                     <!--a href="" class="member_orders_bt_pay">付款</a-->
-                                    <a href="">再次购买</a>
+                                    <a class="member_orders_bt_green" href="">再次购买</a>
                                     <a href="">删除订单</a>
                                 </div>
                             </td>
@@ -281,7 +333,7 @@
         </div>
         <!--近期订单-->
         <!--收藏-->
-        <div class="member_orders_box mb10">
+        <div class="member_orders_box mb15">
             <div class="member_orders_box_label font mb10">
                 <div class="fl">我的收藏</div>
                 <div class="fr">

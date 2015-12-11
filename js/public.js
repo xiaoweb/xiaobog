@@ -1,3 +1,4 @@
-/**
- * Created by zhouliying1 on 2015/11/2.
- */
+//默认加载模块
+var require = {
+    deps: ['lazyload','total']
+}

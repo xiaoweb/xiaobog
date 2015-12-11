@@ -1,5 +1,5 @@
-//高级选项弹出效果
-(function($){
+define(["jquery","easyzoom","lazyload"],function($){   //首个参数为一个数组，是这个模块的依赖，引入时会提前加载依赖
+    //高级选项弹出效果
     var isContent = false;
     var setTime ;
     //标签事件
@@ -89,4 +89,6 @@
             this.src = zoomIn;
         }
     });
-})(jQuery)
+})
+
+

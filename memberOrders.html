@@ -21,19 +21,74 @@
     <link rel="stylesheet" href="css/member.css"/>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/lazyload.js"></script>
-    <script src="js/list_slide-min.js"></script>
 </head>
 <body>
 <!--top-->
-<!--head-->
-<!--nav-->
+<!--会员模块 除登录注册页外 调用此头部-->
+<div class="top">
+    <div class="wd">
+        <div class="left">
+            <span>欢迎来到十月妈咪</span>
+        </div>
+        <div class="right">
+            <a href="login.html" class="login">登录</a>|
+            <a href="regist.html">注册</a>
+            <a href="#">我的订单</a>
+            <a href="http://m.octmami.com" class="m_shop">手机商城</a>
+            <a href="#" id="attention">关注商城<div class="qrcodeShow"></div></a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>
+        <!--login-->
+        <!--<div class="right">
+            <a href="#">你好，13111111111</a>
+            <a href="#">[退出]</a>
+            <a href="#">我的订单</a>
+            <a href="#" class="m_shop">手机商城</a>
+            <a href="#">关注商城</a>
+            <a target="_blank" href="#">防伪查询</a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>-->
+    </div>
+</div>
+<!--top-->
+<!--memberNav-->
+<div class="member_nav_set">
+    <div class="wd">
+        <div class="member_logo">
+            <a class="member_logo_link" href="index.html"></a>
+        </div>
+        <div class="member_nav_menu_set font">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="sales.html">十月闪购</a></li>
+                <li><a href="star.html">明星推荐</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <div class="cat rela">
+                <a target="_blank" href="#"><div class="content"><i class="member_cart_icon"></i>我的购物车<span>&gt;</span></div></a>
+                <div class="member_cart_number ajax_cart_number">3</div>
+            </div>
+            <div class="member_serverSlg_set">
+                <ul>
+                    <li>
+                        <a class="unit_1" href=""></a>
+                    </li>
+                    <li>
+                        <a class="unit_2" href=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--memberNav-->
 <!--member-->
 <div class="wd main">
-    <div class="mb_bread_crumbs mb10">
-        您当前的位置：<span class="mb_bread_crumbs_kw"><a href="member.html">会员中心</a></span>
-        <span>»</span>
-        <span class="now">我的订单</span>
-    </div>
     <!--左侧栏-->
     <div class="mb_left_side_box">
         <div class="mb_left_menu_box">
@@ -45,7 +100,7 @@
                     <a href="memberOrders.html" class="mb_left_menu_link">我的订单</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="memberNodiscuss.html" class="mb_left_menu_link">申请退换货</a>
+                    <a href="#" class="mb_left_menu_link">申请退换货</a>
                 </dd>
             </dl>
             <dl class="mb_left_menu_set">
@@ -53,10 +108,10 @@
                     评论咨询管理
                 </dt>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">未评论商品</a>
+                    <a href="memberNoCmt.html" class="mb_left_menu_link">未评论商品</a>
                 </dd>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">评论与咨询</a>
+                    <a href="memberMyCmt.html" class="mb_left_menu_link">评论与咨询</a>
                 </dd>
             </dl>
             <dl class="mb_left_menu_set">
@@ -65,9 +120,6 @@
                 </dt>
                 <dd class="mb_left_menu_content">
                     <a href="memberFav.html" class="mb_left_menu_link">商品收藏</a>
-                </dd>
-                <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">到货通知</a>
                 </dd>
                 <dd class="mb_left_menu_content">
                     <a href="" class="mb_left_menu_link">我的优惠券</a>
@@ -84,7 +136,7 @@
                     个人信息管理
                 </dt>
                 <dd class="mb_left_menu_content">
-                    <a href="" class="mb_left_menu_link">站内信</a>
+                    <a href="" class="mb_left_menu_link">我的消息</a>
                 </dd>
                 <dd class="mb_left_menu_content">
                     <a href="memberInfo.html" class="mb_left_menu_link">个人信息</a>
@@ -102,31 +154,34 @@
     <!--右侧主区域-->
     <div class="mb_right_content">
         <!--订单-->
-        <div class="member_orders_nbox mb10">
-            <div class="member_orders_box_label_s font">
-                <a href="javascript:void(0)" class="orders_status_menu current" orderStatus="0">全部订单<div class="icn_mem_infor_number">1</div></a>
-                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="1">待付款<div class="icn_mem_infor_number">1</div></a>
-                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="2">待发货<div class="icn_mem_infor_number">1</div></a>
-                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="3">待收货<div class="icn_mem_infor_number">1</div></a>
-                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="4">待评价<div class="icn_mem_infor_number">1</div></a>
+        <div class="member_orders_nbox mb15">
+            <div class="member_orders_box_label_s mb15">
+                <a href="javascript:void(0)" class="orders_status_menu current" orderStatus="0" onclick="orderTabSelect(this)">全部订单<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="1" onclick="orderTabSelect(this)">待付款<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="2" onclick="orderTabSelect(this)">待发货<div class="icn_mem_infor_number">1</div></a>
+                <a href="javascript:void(0)" class="orders_status_menu" orderStatus="3" onclick="orderTabSelect(this)">待收货<div class="icn_mem_infor_number">1</div></a>
+                <a href="memberNoCmt.html" class="orders_status_menu">待评价<div class="icn_mem_infor_number">1</div></a>
             </div>
             <!--订单为空时 member_orders_empty_box替代member_orders_set-->
             <div class="empty_box">
                 <div class="empty_icon"></div>
                 <div class="empty_words_b font">没有待付款的订单哦~</div>
-                <a href="memberFav.html" class="bt_26_green mr10">我的收藏</a>
-                <a href="index.html" class="bt_26_orange">去首页逛逛</a>
+                <div class="empty_words_link">您还可以：
+                    <a href="index.html" class="font_green">去首页逛逛</a>
+                </div>
+                <!--a href="memberFav.html" class="bt_26_green mr10">我的收藏</a>
+                <a href="index.html" class="bt_26_orange">去首页逛逛</a-->
             </div>
             <!--订单为空时 member_orders_empty_box替代member_orders_set-->
             <div class="member_orders_set">
                 <table class="member_orders_main" width="100%">
                     <thead>
                         <tr>
-                            <th width="500">订单详情</th>
-                            <th width="130">金额</th>
-                            <th>订单状态</th>
-                            <th width="127">支付方式</th>
-                            <th width="106">操作</th>
+                            <th>订单详情</th>
+                            <th width="120">金额</th>
+                            <th width="110">订单状态</th>
+                            <th width="110">支付方式</th>
+                            <th width="105">操作</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -140,7 +195,7 @@
                             </td>
                         </tr>
                         <tr class="member_orders_content_row">
-                            <td width="500">
+                            <td>
                                 <div class="member_orders_good_item">
                                     <a href="" class="member_order_good_link">
                                         <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
@@ -153,20 +208,20 @@
                                 </div>
                             </td>
                             <!--几个商品 rowspan为几-->
-                            <td width="130" rowspan="3">￥1980.00</td>
+                            <td rowspan="3">￥1980.00</td>
                             <td rowspan="3">待付款</td>
-                            <td width="127" rowspan="3">支付宝</td>
-                            <td width="96" rowspan="3">
+                            <td rowspan="3">支付宝</td>
+                            <td rowspan="3">
                                 <div class="member_order_good_oper">
-                                    <a href="">查看订单</a>
+                                    <a href="memberOrdersDt.html">查看订单</a>
                                     <!--a href="" class="member_orders_bt_pay">付款</a-->
-                                    <a href="">再次购买</a>
+                                    <a class="member_orders_bt_green" href="">再次购买</a>
                                     <a href="">删除订单</a>
                                 </div>
                             </td>
                         </tr>
                         <tr class="member_orders_content_row">
-                            <td width="500">
+                            <td>
                                 <div class="member_orders_good_item">
                                     <a href="" class="member_order_good_link">
                                         <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
@@ -180,7 +235,7 @@
                             </td>
                         </tr>
                         <tr class="member_orders_content_row">
-                            <td width="500">
+                            <td>
                                 <div class="member_orders_good_item">
                                     <a href="" class="member_order_good_link">
                                         <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
@@ -205,7 +260,7 @@
                             </td>
                         </tr>
                         <tr class="member_orders_content_row">
-                            <td width="500">
+                            <td>
                                 <div class="member_orders_good_item">
                                     <a href="" class="member_order_good_link">
                                         <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
@@ -218,12 +273,12 @@
                                 </div>
                             </td>
                             <!--几个商品 rowspan为几-->
-                            <td width="130" rowspan="2">￥1980.00</td>
+                            <td rowspan="2">￥1980.00</td>
                             <td rowspan="2">待付款</td>
-                            <td width="127" rowspan="2">支付宝</td>
-                            <td width="96" rowspan="2">
+                            <td rowspan="2">支付宝</td>
+                            <td rowspan="2">
                                 <div class="member_order_good_oper">
-                                    <a href="">查看订单</a>
+                                    <a href="memberOrdersDt.html">查看订单</a>
                                     <a href="" class="member_orders_bt_pay">付款</a>
                                     <!--a href="">再次购买</a-->
                                     <a href="">删除订单</a>
@@ -231,7 +286,7 @@
                             </td>
                         </tr>
                         <tr class="member_orders_content_row">
-                            <td width="500">
+                            <td>
                                 <div class="member_orders_good_item">
                                     <a href="" class="member_order_good_link">
                                         <img src="images/test/b_pic22.jpg" title="test1" class="member_orders_good_img" />
@@ -248,8 +303,8 @@
                 </table>
             </div>
             <!--翻页条-->
-            <div class="clearfix">
-                <div class="bt_page_set mt15 mb15">
+            <div class="bt_page_set">
+                <div class="fr mt15 mb10">
                     <a class="bt_page disable">
                         上一页
                         <b>
@@ -289,22 +344,6 @@
     <!--右侧主区域-->
 </div>
 <!--member-->
-<script type="text/javascript">
-$('.orders_status_menu').on("click",
-    function() {
-      var orderStatus = $(this).attr("orderStatus");
-      if (!$(this).hasClass("current")) {
-        $(".orders_status_menu").removeClass("current");
-        $(this).addClass("current");
-        $.post(
-            '#',
-            {'orderStatus ':orderStatus},
-            function (result) {
-                $('.member_orders_main').html(result.xxx);
-            },'json'
-        );
-    }
-});
-</script>
+<script src="js/member.js"></script>
 </body>
 </html>

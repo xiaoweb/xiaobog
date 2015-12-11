@@ -19,11 +19,11 @@
     <title>十月妈咪(Octmami) 小S明星款金属丝防辐射马甲-十月商城-十月妈咪官方商城_中国首家品牌联盟孕婴童商城</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/goods-related.css">
+    <script type="text/javascript" src="js/public.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-
 <div class="wd">
     <!--面包屑-->
     <div class="level_navigation">
@@ -107,7 +107,7 @@
             <div class="picture_quantity">
                 <strong>数量：</strong>
                 <div class="picture_calculate">
-                    <div class="picture_change picture_subtract dis not_select">-</div>
+                    <div class="picture_change picture_subtract not_select">-</div>
                     <div contenteditable="true" class="picture_cont numberText">1</div>
                     <div class="picture_change picture_add not_select">+</div>
                 </div>
@@ -354,14 +354,7 @@
     <!--商品介绍-->
 </div>
 <script type="text/javascript">
-    require(["jquery","easyzoom","sort","numbertext"],function($){
-        $(".numberText").spinner({
-            value: 1,
-            min: 0,
-            max: 15,
-            step: 1
-        });
-    })
+    require(['sort'])
 </script>
 </body>
 </html>

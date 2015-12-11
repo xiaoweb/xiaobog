@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <meta name="author" content="mall.octmami.com">
+    <meta name="copyright" content="Copyright ©www.octmami.com 版权所有">
+    <meta name="revisit-after" content="1 days">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=0.23, minimum-scale=0, user-scalable=no">
+    <title>十月商城-十月妈咪官方商城_中国首家品牌联盟孕婴童商城</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/member.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/list_slide-min.js"></script>
+</head>
+<body>
+<!--top-->
+<!--head-->
+<!--nav-->
+<!--memberInfo-->
+<div class="wd main">
+    <!--左侧栏-->
+    <div class="mb_left_side_box">
+        <div class="mb_left_menu_box">
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    交易管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberOrders.html" class="mb_left_menu_link">我的订单</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberNodiscuss.html" class="mb_left_menu_link">申请退换货</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    评论咨询管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberNoCmt.html" class="mb_left_menu_link">未评论商品</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberMyCmt.html" class="mb_left_menu_link">评论与咨询</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    我的账户
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberFav.html" class="mb_left_menu_link">商品收藏</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的优惠券</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">积分兑换优惠券</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的花生</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set last">
+                <dt class="mb_left_menu_title">
+                    个人信息管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的消息</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberInfo.html" class="mb_left_menu_link">个人信息</a>
+                </dd>
+                <dd class="mb_left_menu_content current">
+                    <a href="safeCenter.html" class="mb_left_menu_link">安全中心</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">收货地址</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--左侧栏-->
+    <!--右侧主区域-->
+    <div class="mb_right_content">
+        <!--安全信息-->
+        <div class="member_orders_box mb15">
+            <div class="member_info_title_set mb10">
+                <span class="member_info_title font">身份验证</span>
+            </div>
+            <!--手机验证1-->
+            <div id="stepSet1" class="step_set step_3">
+                <dl class="first doing">
+                    <dt class="step_num">1</dt>
+                    <dd class="step_text">验证身份<s></s><b></b></dd>
+                    <dd></dd>
+                </dl>
+                <dl class="normal">
+                    <dt class="step_num">2</dt>
+                    <dd class="step_text">设置验证信息<s></s><b></b></dd>
+                </dl>
+                <dl class="last">
+                    <dt class="step_num">3</dt>
+                    <dd class="step_text">完成<s></s><b></b></dd>
+                </dl>
+            </div>
+            <div class="form_safe_center font">
+                <form method="post" action="" id="loginForm">
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl">请选择验证方式：</span>
+                        <div class="findpwd_item fl">
+                            <select class="findpwd_select" id="" name="verificationM">
+                                <option value="mobile">已验证手机</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl">手机号码：</span>
+                        <div class="fl mr15">
+                            13333330000
+                        </div>
+                        <input type="button" value="获取验证码" name="verificationC" class="bt_login_40_grey" onclick="settime(this);">
+                    </div>
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl">填写短信验证码：</span>
+                        <div class="login_item findpwd_item fl mr10" for="authCode">
+                            <!--提示信息-->
+                            <label for="authCode"></label>
+                            <!--提示信息-->
+                            <input type="text" id="authCode" placeholder="短信验证码" name="authCode" class="login_item_input findpwd_input">
+                        </div>
+                    </div>
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl"></span>
+                        <a href="javascript:;" class="bt_30_green mr15" id="findPwdPostMobile" onClick="$(this).submit()">下一步</a>
+                    </div>
+                </form>
+            </div>
+            <!--手机验证1-->
+            <!--手机验证2-->
+            <div id="stepSet1" class="step_set step_3">
+                <dl class="first done">
+                    <dt class="step_num">1</dt>
+                    <dd class="step_text">验证身份<s></s><b></b></dd>
+                    <dd></dd>
+                </dl>
+                <dl class="normal doing">
+                    <dt class="step_num">2</dt>
+                    <dd class="step_text">设置验证信息<s></s><b></b></dd>
+                </dl>
+                <dl class="last">
+                    <dt class="step_num">3</dt>
+                    <dd class="step_text">完成<s></s><b></b></dd>
+                </dl>
+            </div>
+            <div class="form_safe_center font status3">
+                <form method="post" action="" id="loginForm">
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl">手机号码：</span>
+                        <div class="login_item findpwd_item fl mr15" for="user">
+                            <!--提示信息-->
+                            <label for="user"></label>
+                            <!--提示信息-->
+                            <input type="text" id="user" placeholder="手机号" name="user" class="login_item_input findpwd_input">
+                        </div>
+                        <input type="button" value="获取验证码" name="verificationC" class="bt_login_40_grey" onclick="settime(this);">
+                    </div>
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl">填写短信验证码：</span>
+                        <div class="login_item findpwd_item fl mr10" for="authCode">
+                            <!--提示信息-->
+                            <label for="authCode"></label>
+                            <!--提示信息-->
+                            <input type="text" id="authCode" placeholder="短信验证码" name="authCode" class="login_item_input findpwd_input">
+                        </div>
+                    </div>
+                    <div class="findpwd_item_set">
+                        <span class="findpwd_label_name fl"></span>
+                        <a href="javascript:;" class="bt_30_green mr15" id="findPwdPostMobile" onClick="$(this).submit()">下一步</a>
+                    </div>
+                </form>
+            </div>
+            <!--手机验证2-->
+            <!--手机验证3-->
+            <div id="stepSet1" class="step_set step_3">
+                <dl class="first done">
+                    <dt class="step_num">1</dt>
+                    <dd class="step_text">验证身份<s></s><b></b></dd>
+                    <dd></dd>
+                </dl>
+                <dl class="normal done">
+                    <dt class="step_num">2</dt>
+                    <dd class="step_text">设置验证信息<s></s><b></b></dd>
+                </dl>
+                <dl class="last doing">
+                    <dt class="step_num">3</dt>
+                    <dd class="step_text">完成<s></s><b></b></dd>
+                </dl>
+            </div>
+            <div class="success_green_set font">
+                <i class="success_green_icon fl"></i>
+                <div class="fl">
+                    <p class="success_green_title">新密码设置成功！</p>
+                    <p><span class="font_999">您还可以去</span><a href="safeCenter.html">安全中心</a><span class="font_999">完善其它安全设置</span></p>
+                </div>
+            </div>
+            <!--手机验证3-->
+        </div>
+        <!--安全信息-->
+        <!--告知信息-->
+        <div class="member_tipInfo_box mb15">
+            <div class="tipInfo_title">为什么要进行身份验证</div>
+            <div class="tipInfo_content">1. 为保障您的账户信息安全，在变更账户中的重要信息时需要进行身份验证，感谢您的理解和支持。</div>
+        </div>
+        <!--告知信息-->
+        <!--广告-->
+        <div>
+            <a href=""><img src="images/pic_help_center_adv_01.jpg" width="1013" /></a>
+        </div>
+        <!--广告-->
+    </div>
+    <!--右侧主区域-->
+</div>
+<!--memberInfo-->
+<script src="js/jquery.validate.js"></script>
+<script src="js/validate.expand.js"></script>
+<script src="js/member.js"></script>
+<script src="js/loginReg.js"></script>
+</body>
+</html>

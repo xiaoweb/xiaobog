@@ -1,0 +1,66 @@
+<div class="address_box">
+    <div class="member_info_form mb15"  ms-controller="address">
+            <div class="member_info_item">
+                <label class="member_info_label"><i class="member_info_label_star">*</i>收货人：</label>
+                <span class="member_info_input_set"><input class="member_info_input" name="" ms-attr-value="data.consignee"  type="text" ></span>
+            </div>
+            <div class="member_info_item">
+                <label class="member_info_label"><i class="member_info_label_star">*</i>所在地区：</label>
+                        <span class="member_info_input_set">
+                            <select name="" class="member_info_sele province" disabled>
+                                <option value="0" disabled selected>
+                                    请选择：
+                                </option>
+                                <option selected>
+                                    {{data.province}}
+                                </option>
+                            </select>
+                            <label class="member_info_input_label">
+
+                            </label>
+                            <select name="" class="member_info_sele city" disabled>
+                                <option value="0" disabled>
+                                    请选择：
+                                </option>
+                                <option selected>
+                                    {{data.city}}
+                                </option>
+                            </select>
+                            <label class="member_info_input_label">
+
+                            </label>
+                            <select name="" class="member_info_sele county" disabled>
+                                <option value="1">
+                                    请选择：
+                                </option>
+                                <option selected>
+                                    {{data.county}}
+                                </option>
+                            </select>
+                            <label class="member_info_input_label">
+
+                            </label>
+                        </span>
+            </div>
+            <div class="member_info_item">
+                <label class="member_info_label"><i class="member_info_label_star">*</i>详细地址：</label>
+                <span class="member_info_input_set"><input class="member_info_input input_address" name="" value="" ms-attr-value="data.address" type="text"></span>
+            </div>
+            <div class="member_info_item">
+                <label class="member_info_label"><i class="member_info_label_star">*</i>手机号码：<span class="order_gu_title">固定电话：</span></label>
+                <span class="member_info_input_set"><input class="member_info_input" ms-attr-value="data.mobile" name="" value="" type="text" ></span>
+                <span>　或　</span>
+                <span class="member_info_input_set"><input class="member_info_input" ms-attr-value="data.phone" name="" value="" type="text" ></span>
+            </div>
+            <div class="member_info_item">
+                <label class="member_info_label">邮编：</label>
+                <span class="member_info_input_set"><input class="member_info_input" ms-attr-value="data.zipCode" name="" value="" type="text" ></span>
+            </div>
+            <div class="member_info_item">
+                <label class="member_info_label"></label>
+                        <span class="member_info_input_set">
+                            <a class="bt_30_green font save_btn" href="javascript:void(0)">保存收货地址</a>
+                        </span>
+            </div>
+    </div>
+</div>

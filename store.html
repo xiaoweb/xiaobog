@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <meta name="author" content="mall.octmami.com">
+    <meta name="copyright" content="Copyright ©www.octmami.com 版权所有">
+    <meta name="revisit-after" content="1 days">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=0.23, minimum-scale=0, user-scalable=no">
+    <title>十月商城-十月门店</title>
+    <link rel="stylesheet" href="css/octmami_v1.1.style.css"/>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/list_slide-min.js"></script>
+</head>
+<body>
+
+<!--top-->
+<div class="top">
+    <div class="wd">
+        <div class="left">
+            <span>欢迎来到十月妈咪</span>
+        </div>
+        <div class="right">
+            <a href="#" class="login">登录</a>|
+            <a href="#">注册</a>
+            <a href="#">我的订单</a>
+            <a href="#" class="m_shop">手机商城</a>
+            <a href="#" id="attention">关注商城<div class="qrcodeShow"></div></a>
+            <a target="_blank" href="#">防伪查询</a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>
+        <!--login-->
+        <!--<div class="right">
+            <a href="#">你好，13111111111</a>
+            <a href="#">[退出]</a>
+            <a href="#">我的订单</a>
+            <a href="#" class="m_shop">手机商城</a>
+            <a href="#">关注商城</a>
+            <a target="_blank" href="#">防伪查询</a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>-->
+    </div>
+</div>
+<!--top-->
+<!--head-->
+<div class="head">
+    <div class="wd">
+        <div class="logo">
+            <a target="_blank" href="#"><img src="http://image.octmami.com/public/pic/web/octmami_v1.0.1/logo.png" /></a>
+        </div>
+        <div class="search">
+            <div class="content">
+                <div class="text">
+                    <input type="text" />
+                </div>
+                <div class="button"><a target="_blank" href="#">搜索</a></div>
+            </div>
+            <div class="keyword">
+                <strong>热门搜索：</strong>
+                <a target="_blank" href="#"><b>夏装19元</b></a>
+                <a target="_blank" href="#">孕妇裤</a>
+                <a target="_blank" href="#">进口花王</a>
+                <a target="_blank" href="#"><b>0甲醛婴装</b></a>
+                <a target="_blank" href="#">进口花王</a>
+            </div>
+        </div>
+        <div class="cat rela">
+            <a target="_blank" href="#"><div class="content">我的购物车<span>></span></div></a>
+            <div class="ico abso">3</div>
+        </div>
+    </div>
+</div>
+<!--head-->
+<!--nav-->
+<div class="nav">
+    <div class="content wd rela">
+        <div class="all_categories rela">
+            <a href="javascript:void(0);">所有商品分类<span class="btn"></span></a>
+            <div class="categories_content abso" style="display: none;">
+                <div class="sequence">
+                    <div class="web10_title"><a href="/gallery-index---0---19.html" target="_blank">服饰类</a></div>
+                    <ul>
+                        <li><a target="_blank" href="/gallery-23.html">上装</a></li>
+                        <li><a target="_blank" href="/gallery-24.html">下装</a></li>
+                        <li><a target="_blank" href="/gallery-25.html">裙装</a></li>
+                        <li><a target="_blank" href="/gallery-21.html">孕妇内衣</a></li>
+                        <li><a target="_blank" href="/gallery-1.html">防辐射服</a></li>
+                        <li><a target="_blank" href="/gallery-94.html">宝宝鞋服</a></li>
+                    </ul>
+                </div>
+                <div class="sequence">
+                    <div class="web10_title"><a href="/gallery-index---0---20.html" target="_blank">纸品类</a></div>
+                    <ul>
+                        <li><a target="_blank" href="/gallery-51.html">纸尿裤</a></li>
+                        <li><a target="_blank" href="/gallery.html?scontent=n,%E6%8B%89%E6%8B%89%E8%A3%A4">拉拉裤</a></li>
+                        <li><a target="_blank" href="/gallery-53.html">湿巾</a></li>
+                    </ul>
+                </div>
+                <div class="sequence">
+                    <div class="web10_title"><a href="/gallery-index---0---21.html" target="_blank">用品类</a></div>
+                    <ul>
+                        <li><a target="_blank" ef="/gallery.html?scontent=n,%E5%A5%B6%E7%93%B6">奶瓶 </a></li>
+                        <li><a target="_blank" href="/gallery.html?scontent=n,%E5%A5%B6%E5%98%B4">奶嘴</a></li>
+                        <li><a target="_blank" href="/gallery-45.html">吸奶器</a></li>
+                        <li><a target="_blank" href="/gallery-48.html">水壶水杯</a></li>
+                        <li><a target="_blank" href="/gallery-50.html">宝宝餐具</a></li>
+                    </ul>
+                </div>
+                <div class="sequence">
+                    <div class="web10_title"><a href="/gallery-index---0---22.html" target="_blank">洗护美容类</a></div>
+                    <ul>
+                        <li><a target="_blank" href="/gallery-54.html">宝宝护肤</a></li>
+                        <li><a target="_blank" href="/gallery-55.html">宝宝洗浴</a></li>
+                        <li><a target="_blank" href="/gallery-index---0---25.html">妈妈美容</a></li>
+                        <li><a target="_blank" href="/gallery-76.html">妈妈洗护</a></li>
+                    </ul>
+                </div>
+                <div class="sequence">
+                    <div class="web10_title"><a href="/gallery-index---0---23.html" target="_blank">玩具出行类</a></div>
+                    <ul>
+                        <li><a target="_blank" href="/gallery-62.html">婴儿推车</a></li>
+                        <li><a target="_blank" href="/gallery-79.html">安全座椅</a></li>
+                        <li><a target="_blank" href="/gallery.html?scontent=n,%E5%A6%88%E5%92%AA%E5%8C%85">妈妈包</a></li>
+                        <li><a target="_blank" href="/gallery-index---0---28.html">玩具</a></li>
+                    </ul>
+                </div>
+                <div class="sequence">
+                    <div class="web10_title"><a href="#" target="_blank">食品类</a></div>
+                    <ul>
+                        <li><a target="_blank" href="/gallery-41.html">宝宝奶粉</a></li>
+                        <li><a target="_blank" href="/gallery-42.html">宝宝辅食</a></li>
+                        <li><a target="_blank" href="/gallery.html?scontent=n,%E8%90%A5%E5%85%BB%E5%93%81">营养品</a></li>
+                        <li><a target="_blank" href="/gallery-41.html">妈妈奶粉</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="list">
+            <li class="act"><a target="_blank" href="#">　首页　</a></li>
+            <li><a href="flashsale.html">十月闪购</a></li>
+            <li><a target="_blank" href="#">明星推荐</a></li>
+            <li><a target="_blank" href="#">冠军联盟</a></li>
+        </ul>
+        <div class="nav_right">
+            <a href="#" target="_blank">十月妈咪门店</a>
+            <span>|</span>
+            <a href="#" target="_blank">十月妈咪加盟</a>
+        </div>
+    </div>
+    <div class="nav_shadow"></div>
+</div>
+<!--nav-->
+<!--store-->
+<div class="store lazyimg">
+    <div class="wd">
+        <div class="store_city">
+            <a href="#" class="act">北京</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+            <a href="#">廊坊</a>
+        </div>
+        <div class="store_content">
+            <ul>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+                <li>
+                    <div class="store_pic"><img src="images/test/store_pic.png" alt=""/></div>
+                    <div class="store_name">百联南方</div>
+                    <div class="store_address">地址：丰台区八条8号院三区</div>
+                    <div class="store_phone">电话：010-59056912</div>
+                </li>
+            </ul>
+            <div class="store_page">
+                <a href="#">上一页</a>
+                <a href="#">首页</a>
+                <a href="#" class="act">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <span>...</span>
+                <a href="#">30</a>
+                <a href="#">尾页</a>
+                <a href="#">下一页</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--store-->
+<!--bottom-->
+<div class="bottoms rela">
+    <div class="wd rela">
+        <div class="help">
+            <ul>
+                <li><b>关于十月妈咪</b></li>
+                <li><a target="_blank" href="">关于我们</a></li>
+                <li><a target="_blank" href="">联系我们</a></li>
+                <li><a target="_blank" href="">广告服务</a></li>
+                <li><a target="_blank" href="">十月招聘</a></li>
+                <li><a target="_blank" href="">十月开店</a></li>
+                <li><a target="_blank" href="">十月加盟</a></li>
+                <li><a target="_blank" href="">友情链接</a></li>
+            </ul>
+            <ul>
+                <li><b>消费者保障</b></li>
+                <li><a target="_blank" href="">购物保障</a></li>
+                <li><a target="_blank" href="">购物安全</a></li>
+                <li><a target="_blank" href="">如何退换货</a></li>
+                <li><a target="_blank" href="">发票制度</a></li>
+                <li><a target="_blank" href="">售后服务</a></li>
+                <li><a target="_blank" href="">常见问题解答</a></li>
+            </ul>
+            <ul>
+                <li><b>购物指南</b></li>
+                <li><a target="_blank" href="">购物演示</a></li>
+                <li><a target="_blank" href="">如何参加促销</a></li>
+                <li><a target="_blank" href="">订单查询</a></li>
+                <li><a target="_blank" href="">修改订单</a></li>
+                <li><a target="_blank" href="">商品签收</a></li>
+                <li><a target="_blank" href="">使用优惠券和积分</a></li>
+                <li><a target="_blank" href="">隐私权与服务</a></li>
+            </ul>
+            <ul>
+                <li><b>支付配送</b></li>
+                <li><a target="_blank" href="">网上支付</a></li>
+                <li><a target="_blank" href="">货到付款</a></li>
+                <li><a target="_blank" href="">支付宝汇款</a></li>
+                <li><a target="_blank" href="">银行汇款</a></li>
+                <li><a target="_blank" href="">配送时效</a></li>
+                <li><a target="_blank" href="">运费标准</a></li>
+            </ul>
+            <ul>
+                <li><b>特色服务</b></li>
+                <li><a target="_blank" href="">会员专享</a></li>
+                <li><a target="_blank" href="">会员等级</a></li>
+                <li><a target="_blank" href="">会员积分</a></li>
+                <li><a target="_blank" href="">免责条款</a></li>
+                <li><a target="_blank" href="">优惠券使用</a></li>
+                <li><a target="_blank" href="">积分使用</a></li>
+            </ul>
+
+        </div>
+        <div class="service abso">
+            <div class="left">
+                <div class="contact"></div>
+                <span><span>4001-892-892</span></span>
+            </div>
+            <div class="right">全国统一服务热线</div>
+            <div class="qcode">
+                <img src="images/bottomqcode.png" />
+            </div>
+        </div>
+    </div>
+    <div class="credit">
+        <div class="wd">
+            <ul>
+                <li class="b1"><b>中国首家</b><span>孕婴童冠军品牌联盟</span></li>
+                <li class="b2"><b>7天无理由退换货</b></li>
+                <li class="b3"><b>闪电发货</b></li>
+                <li class="b4"><b>千万妈咪 口碑信赖</b></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wd">
+        <div class="copyright">
+            <a>
+                Copyright
+            </a>
+            opyright © 2014 O.C.T.MAMI All rights reserved.|沪ICP备13013146号|www.octmami.com 版权所有 上海十月妈咪网络股份有限公司
+            <br>
+        </div>
+    </div>
+</div>
+<!--bottom-->
+<script type="text/javascript">
+    //头部二维码弹出
+    $('#attention').hover(function(){
+        $(this).find(".qrcodeShow").stop().fadeToggle(200);
+    });
+    //收藏商城
+    function addToFavorite() {
+        var a = "http://www.octmami.com/",
+                b = "十月商城";document.all ? window.external.AddFavorite(a, b) : window.sidebar && window.sidebar.addPanel ? window.sidebar.addPanel(b, a, "") :
+                alert("\u5bf9\u4e0d\u8d77\uff0c\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u64cd\u4f5c!\n\u8bf7\u60a8\u4f7f\u7528\u83dc\u5355\u680f\u6216Ctrl+D\u6536\u85cf\u672c\u7ad9\u3002") }
+    jQuery(".top_collect").click(function(){addToFavorite();return false;});
+    //顶部导航下拉
+    jQuery(".all_categories").hover(function(){
+        jQuery(this).find(".categories_content").slideDown(200);
+    },function(){
+        jQuery(this).find(".categories_content").stop().slideUp(200);
+    });
+</script>
+</body>
+</html>

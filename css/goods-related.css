@@ -1124,6 +1124,7 @@ img.picture_pic_big{
 .pro_com_interflow{
     margin:14px 0;
 }
+
 .pro_com_interflow a{
     color:#999;
 }
@@ -1132,7 +1133,7 @@ img.picture_pic_big{
 }
 
 .pro_com_pic img{
-    cursor:url(../images/com_pic_cursor_zoom-in.png),url(//image.octmami.com/public/pic/web/zoom_in.cur),auto;
+    cursor:url(../images/com_pic_cursor_zoom-in.png), url(//image.octmami.com/public/pic/web/zoom_in.cur), auto;
     border:1px solid #e5e5e5;
     margin-right:10px;
     vertical-align:top;
@@ -1142,7 +1143,7 @@ img.picture_pic_big{
 }
 
 .pro_com_pic img.act{
-    cursor:url(../images/com_pic_cursor_zoom-out.png),url(//image.octmami.com/public/pic/web/zoom_out.cur),auto;
+    cursor:url(../images/com_pic_cursor_zoom-out.png), url(//image.octmami.com/public/pic/web/zoom_out.cur), auto;
     width:320px;
     height:320px;
 }
@@ -1166,12 +1167,15 @@ img.picture_pic_big{
     text-align:center;
     line-height:20px;
 }
+
 .product_advisory .product_all_advisor{
     right:110px;
     width:auto;
     top:8px;
-    background:none;border:none;
+    background:none;
+    border:none;
 }
+
 .product_advisory .product_comment_con li{
     line-height:24px;
     padding:15px 0;
@@ -1300,4 +1304,509 @@ img.picture_pic_big{
     position:relative;
     *top:5px;
 }
+
+/*品牌分类*/
+.brand_list{
+}
+
+.brand_title{
+    font-size:14px;
+    font-weight:bold;
+    color:#666;
+    font-family:SimSun;
+}
+
+.brand_title ul{
+    overflow:hidden;
+    padding-left:8px;
+}
+
+.brand_title ul li{
+    display:inline-block;
+    float:left;
+    margin-right:40px;
+    height:24px;
+    line-height:24px;
+    cursor:pointer;
+}
+
+.brand_title ul li.act{
+    color:#27b484;
+    border-bottom:2px solid #27b484;
+    padding:0 2px;
+}
+
+.brand_title ul li.act a{
+    color:#27b484;
+}
+
+.brand_content{
+    margin-top:20px;
+}
+
+.brand_content ul{
+    overflow:hidden;
+    border:1px solid #e5e5e5;
+    margin-left:-3px;
+    border-bottom:none;
+    border-right:none;
+}
+
+.brand_content ul li{
+    width:172px;
+    height:81px;
+    float:left;
+    border-bottom:1px solid #e5e5e5;
+    border-right:1px solid #e5e5e5;
+    position:relative;
+    right:-1px;
+}
+
+.brand_content ul li a{
+    display:block;
+    height:100%;
+    text-align:center;
+}
+
+.brand_content ul li a img{
+    height:100%;
+}
+
+.recently_viewed{
+    margin:10px 0 20px 0;
+    color:#333;
+}
+
+.recently_viewed_title{
+    font-size:22px;
+    height:50px;
+    line-height:50px;
+    border-bottom:1px solid #e1e1e1;
+    position:relative;
+}
+
+.recently_viewed_content{
+}
+
+.recently_viewed_content .pro_name{
+    margin-top:10px;
+}
+
+.recently_viewed_content ul li{
+    width:199px;
+}
+
+.recently_viewed_content ul li .product_content img{
+    width:181px;
+    height:181px;
+}
+
+.recently_viewed_content ul li a:hover{
+    border:1px solid #fff;
+    box-shadow:none;
+}
+
+.refresh_btn{
+    display:block;
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:12px;
+    color:#999;
+    line-height:50px;
+    font-weight:100;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+.refresh_btn:hover{
+}
+
+.refresh_ico{
+    background:url(../images/oct_ico.png) -68px 0 no-repeat;
+    width:15px;
+    height:16px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align:middle;
+    position:relative;
+    top:-1px;
+}
+
+.ms-hide{
+    display:none;
+}
+
+div[ms-controller]{
+    display:none;
+}
+
+/*upper*/
+.upper.flash_sale{
+    height:104px;
+    background:#f8f8f8;
+    width:100%;
+    border-top:1px solid #ecebec;
+    border-bottom:2px solid #46d9a7;
+    position:relative;
+    z-index:2;
+}
+
+.upper.flash_sale .web10_center{
+    overflow:visible;
+}
+
+.upper.flash_sale .left{
+    font-size:30px;
+    line-height:104px;
+    height:100%;
+    color:#27b484;
+    width:150px;
+    float:left;
+}
+
+.upper.flash_sale .middle{
+    width:350px;
+    overflow:auto;
+    float:right;
+    margin-left:20px;
+    font-family:SimHei, STHeiti, WenQuanYi Micro Hei;
+    margin-top:5px;
+}
+
+.upper.flash_sale .middle ul{
+    padding:27.5px 0;
+    margin-left:-1px;
+}
+
+.upper.flash_sale .middle ul li{
+    width:173px;
+    height:37px;
+    float:left;
+    background:url(../images/oct_ico.png) no-repeat;
+    font-size:14px;
+    color:#666;
+    text-indent:55px;
+    overflow:hidden;
+    padding-top:3px;
+}
+
+.upper.flash_sale .middle ul li span{
+    display:block;
+    line-height:35px;
+    color:#000;
+    font-size:14px;
+}
+
+.upper.flash_sale .middle ul li.alliance{
+    background-position:-146px -424px;
+    width:120px;
+}
+
+.upper.flash_sale .middle ul li.returns{
+    background-position:-160px -118px;
+}
+
+.upper.flash_sale .middle ul li.shipping{
+    background-position:-160px -160px;
+}
+
+.upper.flash_sale .right{
+    width:130px;
+    float:right;
+}
+
+.upper.flash_sale .right ul{
+    margin-left:-1px;
+    padding-top:49px;
+    *overflow:hidden;
+}
+
+.upper.flash_sale .right ul li{
+    width:81px;
+    float:left;
+    height:25px;
+    border-left:1px solid #c7c7c7;
+    line-height:25px;
+    text-align:center;
+    padding-left:39px;
+    background:url(../images/v1.0.1_icon.png?v=1.0.1) no-repeat;
+    position:relative;
+}
+
+.upper.flash_sale .right ul li a{
+    color:#707070;
+}
+
+.upper.flash_sale .right ul li.kefu{
+    background-position:-283px -378px;
+}
+
+.upper.flash_sale .right ul li.collect{
+    background-position:-283px -338px;
+}
+
+.upper.flash_sale .right ul li.cat{
+    background-position:-283px -463px;
+    position:relative;
+}
+
+.upper.flash_sale .right ul li.cat .ico{
+    background:url(../images/v1.0.1_icon.png?v=1.0.1) 0 -587px no-repeat;
+    width:15px;
+    height:15px;
+    top:-10px;
+    display:inline-block;
+    text-align:center;
+    line-height:16px;
+    color:#fff;
+    font-weight:bold;
+    right:58px;
+    letter-spacing:-1px;
+    font-family:arial;
+    font-size:10px;
+}
+
+
+.flash_sale_banner{
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+}
+
+.flash_sale_banner a{
+    display:block;
+}
+
+.flash_sale_banner img{
+    position:absolute;
+    left:50%;
+    top:0;
+    margin-left:-960px;
+}
+
+/*闪购列表*/
+.flashsale_left{
+    width:898px;
+    float:left;
+}
+
+.flashsale_left ul{
+    padding-top:15px;
+    float:left;
+}
+
+.flashsale_left ul li{
+    background:#fff;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.flashsale_left ul li a{
+    border:1px solid #eaeaea;
+    display:block;
+}
+
+.flashsale_left ul li a img{
+    width:896px;
+    display:block;
+}
+
+.flashsale_left ul li a:hover{
+    border:1px solid #ff6600;
+}
+
+.wd{
+}
+
+.flashsale_time_ico{
+    background:url(../images/oct_ico.png) -50px -19px no-repeat;
+    width:10px;
+    height:10px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align:middle;
+    margin-right:3px;
+}
+
+.flashsale_right{
+    width:293px;
+    float:right;
+    margin-top:15px;
+}
+
+.flashsale_title{
+    width:100%;
+    height:41px;
+    line-height:40px;
+    font-size:24px;
+    margin:10px 0;
+    color:#27b484;
+    width:898px;
+    float:left;
+}
+
+.flashsale_title span{
+    position:relative;
+    top:0;
+    background:#f5f5f5;
+    padding:0 2px;
+    left:-18px;
+    line-height:20px;
+    *line-height:24px;
+    display:inline-block;
+}
+
+.time_box{
+    width:226px;
+    text-align:center;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.flashsale_title i{
+    font-size:16px;
+    color:#333;
+}
+
+.flash_time_ico{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:41px;
+    height:41px;
+    background:url(../images/oct_ico.png) 0 -139px no-repeat;
+}
+
+.flashsale_title.act{
+    background-position:0 -97px;
+    color:#ff6600;
+}
+
+.flashsale_title.act .flash_time_ico{
+    background-position:0 -97px;
+}
+
+.flash_body{
+    background:#f5f5f5;
+}
+
+.flashsale_time{
+    height:25px;
+    padding:0 20px;
+    text-align:center;
+    background:#b8b8b8;
+    line-height:25px;
+    color:#fff;
+    border-radius:12px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    margin-top:180px;
+    font-family:SimSun;
+}
+
+.flashsale_news{
+    font-family:SimSun
+}
+
+.flashsale_news_tab{
+}
+
+.flashsale_news_tab ul{
+    overflow:hidden;
+}
+
+.flashsale_news_tab ul li{
+    width:50%;
+    *width:49.9%;
+    float:left;
+    height:40px;
+    border-top:2px solid #f0f0f0;
+    line-height:40px;
+    text-align:center;
+    font-size:14px;
+    color:#666;
+    background-color:#f0f0f0;
+    cursor:pointer;
+}
+
+.flashsale_news_tab ul li.act{
+    border-color:#ff6600;
+    background-color:#fff;
+    color:#ff6600;
+}
+
+.flashsale_news_content{
+    background-color:#fff;
+}
+
+.flashsale_news_content ul{
+    padding:6px 5px 15px 5px;
+    display:none;
+}
+
+.flashsale_news_content ul.act{
+    display:block;
+}
+
+.flashsale_news_content ul li{
+    line-height:12px;
+    margin-top:10px;
+    text-indent:5px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.flashsale_brands{
+    margin-top:20px;
+}
+
+.flashsale_brands_title{
+    border-bottom:1px solid #e5e5e5;
+    height:10px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.flashsale_brands_title b{
+    font-size:18px;
+    color:#333;
+    background:#f5f5f5;
+    padding:0 5px;
+}
+
+.flash_sale.wd{
+    overflow:hidden;
+}
+
+.flashsale_brands .brand_content{
+    border-bottom:1px solid #e3e3e3;
+    overflow:hidden;
+    margin-top:30px;
+}
+
+.flashsale_brands .brand_content ul{
+    border-right:1px solid #e3e3e3;
+    margin-left:1px;
+    margin-bottom:-1px;
+}
+
+.flashsale_brands .brand_content ul li{
+    width:144px;
+    background:#fff;
+    border-color:#e3e3e3;
+    border-bottom-style:dashed;
+    border-right-style:dashed;
+}
+
+
+
+
+
+
 
