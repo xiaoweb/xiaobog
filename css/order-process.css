@@ -566,5 +566,5 @@ a.cart_clearing_btn:hover{
 .save_btn:hover{background:#e9e9e9;color:#333;}
 .input_address{width:460px;}
 .order_gu_title{margin-left:190px;}
-body .address-layer-style{background:rgba(0,0,0,.1);padding:4px;border-radius:2px;box-shadow:none;}
-body .address-layer-style .layui-layer-content{padding: 20px 40px;background:#fff;}
+body .custom-layer-style{background:rgba(0,0,0,.1);padding:4px;border-radius:2px;box-shadow:none;}
+body .custom-layer-style .layui-layer-content{padding: 20px 40px;background:#fff;}

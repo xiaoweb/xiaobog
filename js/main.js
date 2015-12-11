@@ -26,7 +26,6 @@ require.config({
         listslide :  ["jquery"],//首页推荐插件
         layer: ["jquery"], //弹出层插件
         easyzoom: ["jquery"],//商品图片放大插件
-        laytpl: ["jquery"], //模板引擎插件
         numbertext: ["jquery"], //加减数字插件
         lazyload: ['jquery'], //图片懒加载插件
         //页面js文件

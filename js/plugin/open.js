@@ -1,5 +1,5 @@
 /** * Created with WebStorm. * User: RD-小小WEB * Date: 2015/12/11 * Time: 15:10 */
-define(['jquery','avalon','layer'],function($,avalon,layer){
+define(['jquery','layer','laytpl'],function(layer,laytpl){
     var addressHtml = [];
     var index = 1;
     var domId = {
@@ -9,7 +9,7 @@ define(['jquery','avalon','layer'],function($,avalon,layer){
         path: './js/plugin/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
     });
     //打开窗口
-    function openWindow(element,fn,vm){
+    function openWindow(element,fn,datas){
         layer.closeAll();
         layer.open({
             type: 1,
@@ -18,23 +18,22 @@ define(['jquery','avalon','layer'],function($,avalon,layer){
             closeBtn: 1,
             shadeClose: true,
             shade:0.2,
-            skin: 'address-layer-style',
-            content: (function(a){
+            skin: 'custom-layer-style',
+            content:laytpl((function(a){
                 if(typeof a == "object"){
                     return a.outerHTML;
                 }else{
                     return a;
                 }
-            })(addressHtml[domId.index].dom)
+            })(addressHtml[domId.index].dom)).render(datas)
         });
-        $(".address-layer-style .save_btn").on('click',fn);
-        avalon.scan();
-        if($(".address-layer-style .province").length){
+        $(".custom-layer-style .custom-layer-btn").on('click',function(){fn()});
+        if($(".custom-layer-style .province").length){
             require(['area'],function(area){
                 $(".address_box").area({
-                    province :vm.data.province,
-                    city :vm.data.city,
-                    county :vm.data.county
+                    province :datas.province,
+                    city :datas.city,
+                    county :datas.county
                 });
             });
         }
@@ -44,8 +43,6 @@ define(['jquery','avalon','layer'],function($,avalon,layer){
     function openAddress(op){
         op.datas = op.datas || {};
         op.fn = op.fn || new Function;
-        op.vm = op.vm || {};
-        op.id = $(op.tpl).attr("dom-id") || op.tpl;
         $(op.element).on("click",function(){
             var th = this;
             var id  = $(op.tpl).attr("dom-id") || op.tpl;
@@ -63,13 +60,14 @@ define(['jquery','avalon','layer'],function($,avalon,layer){
                     domId.index = 0;
                 }
             });
-            if(!domId.stu){
-                layer.load(0,{
-                    shade:0.2
-                });
+            if(domId.stu){
+                openWindow(th,op.fn,op.datas);
+            }else{
                 if(typeof op.tpl == "string"){
+                    layer.load(0,{
+                        shade:0.2
+                    });
                     $.get(op.tpl,function(data){
-                        op.vm.data = op.datas;
                         if(addressHtml.length){
                             domId.index++;
                         }
@@ -77,10 +75,9 @@ define(['jquery','avalon','layer'],function($,avalon,layer){
                             title :  op.tpl,
                             dom : data
                         });
-                        openWindow(th,op.fn,op.vm);
+                        openWindow(th,op.fn,op.datas);
                     },'html')
                 }else if(typeof op.tpl == "object"){
-                    op.vm.data = op.datas;
                     $(op.tpl).attr('dom-id',"dom"+ index++);
                     if(addressHtml.length){
                         domId.index++;
@@ -89,15 +86,12 @@ define(['jquery','avalon','layer'],function($,avalon,layer){
                         dom : op.tpl,
                         title : $(op.tpl).attr('dom-id')
                     });
-                    openWindow(th,op.fn,op.vm);
+                    openWindow(th,op.fn,op.datas);
                 }
-            }else{
-                op.vm.data = op.datas;
-                openWindow(th,op.fn,op.vm);
             }
         })
     }
     return {
-        openAddress : openAddress
+        open : openAddress
     }
 })
