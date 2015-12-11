@@ -1,5 +1,5 @@
 /** * Created with WebStorm. * User: RD-小小WEB * Date: 2015/12/11 * Time: 15:10 */
-define(['jquery','layer','laytpl'],function(layer,laytpl){
+define(['jquery','layer','laytpl'],function($,layer,laytpl){
     var addressHtml = [];
     var index = 1;
     var domId = {
