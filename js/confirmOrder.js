@@ -1,6 +1,5 @@
 /** * Created with WebStorm. * User: RD-小小WEB * Date: 2015/12/11 * Time: 15:16 */
 define(['open'],function(open){
-    //打开新窗口
     var addressDate = new initData({
         consignee : '',
         province : '',
