@@ -9,34 +9,59 @@ define(['jquery','layer','laytpl'],function($,layer,laytpl){
         path: './js/plugin/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
     });
     //打开窗口
-    function openWindow(element,fn,datas){
-        layer.closeAll();
+    function openWindow(element,op){
+        layer.close(op.loadIndex);
         layer.open({
             type: 1,
             area: '760px',
-            title: '添加收货地址',
+            title: op.title || '',
             closeBtn: 1,
             shadeClose: true,
             shade:0.2,
             skin: 'custom-layer-style',
-            content:laytpl((function(a){
+            content: laytpl((function(a){
                 if(typeof a == "object"){
                     return a.outerHTML;
                 }else{
                     return a;
                 }
-            })(addressHtml[domId.index].dom)).render(datas)
-        });
-        $(".custom-layer-style .custom-layer-btn").on('click',function(){fn()});
-        if($(".custom-layer-style .province").length){
-            require(['area'],function(area){
-                $(".address_box").area({
-                    province :datas.province,
-                    city :datas.city,
-                    county :datas.county
+            })(addressHtml[domId.index].dom)).render(op.datas),
+            success: function(layero, index){
+                layero.find(".custom-layer-btn").on('click',function(e){
+                    var obDate = {
+                        element:{},
+                        data:{}
+                    };
+                    layero.find('[oct-ob]').each(function(i,t){
+                        var octOb = $(t).attr("oct-ob");
+                        obDate.element[octOb] = t;
+                        obDate.data[octOb] = (function(element){
+                            switch (element.tagName){
+                                case 'INPUT':
+                                    return element.value;
+                                case 'SELECT':
+                                    return  $(element).find('option:selected').val();
+                                default :
+                                    return element.innerHTML;
+                            }
+                        })(t)
+                    });
+                    var t = op.fn.call(obDate,index,layero);
+                    if( typeof t != 'undefined' && t == false){
+                        return false;
+                    }
                 });
-            });
-        }
+                if(layero.find('.province').length){
+                    require(['area'],function(area){
+                        $(".address_box").area({
+                            province :op.datas.province,
+                            city :op.datas.city,
+                            county :op.datas.county
+                        });
+                    });
+                }
+            }
+        });
         element.disabled = false;
     }
     //触发事件
@@ -61,10 +86,10 @@ define(['jquery','layer','laytpl'],function($,layer,laytpl){
                 }
             });
             if(domId.stu){
-                openWindow(th,op.fn,op.datas);
+                openWindow(th,op);
             }else{
                 if(typeof op.tpl == "string"){
-                    layer.load(0,{
+                    op.loadIndex = layer.load(0,{
                         shade:0.2
                     });
                     $.get(op.tpl,function(data){
@@ -75,7 +100,7 @@ define(['jquery','layer','laytpl'],function($,layer,laytpl){
                             title :  op.tpl,
                             dom : data
                         });
-                        openWindow(th,op.fn,op.datas);
+                        openWindow(th,op);
                     },'html')
                 }else if(typeof op.tpl == "object"){
                     $(op.tpl).attr('dom-id',"dom"+ index++);
@@ -86,7 +111,7 @@ define(['jquery','layer','laytpl'],function($,layer,laytpl){
                         dom : op.tpl,
                         title : $(op.tpl).attr('dom-id')
                     });
-                    openWindow(th,op.fn,op.datas);
+                    openWindow(th,op);
                 }
             }
         })

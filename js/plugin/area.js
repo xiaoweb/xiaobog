@@ -9,7 +9,15 @@ define(['jquery','areaData'],function($,data){
         function eachData(ele,data){
             ele.find('option').eq(0).nextAll().remove();
             $(data).each(function(i,t){
-                ele.append('<option>'+ t.name+'</option>')
+                if(ele === province){
+                    var Reg = /市|省|自治区|壮族自治区|回族自治区|维吾尔自治区|自治区/;
+                    if(Reg.test(t.name)){
+                        var str = t.name;
+                        ele.append('<option>'+ str.replace(Reg,"")+'</option>')
+                    }
+                }else{
+                    ele.append('<option>'+ t.name+'</option>')
+                }
             });
             ele[0][0].selected = true;
         }

@@ -1,3 +1,6 @@
+$().ready(function() {
+	resetDelete()
+})
 //评论星数
 function selHeart(obj){
 	var _select = $(obj);
@@ -82,7 +85,7 @@ function dropDownChange(obj){
 	$(".coupon_staus_label").toggleClass('act');
 }
 //消息删除
- function deleteMessage(id) {
+function deleteMessage(id) {
     $.ajax( {
         url : url + "",
         data : {
@@ -97,4 +100,93 @@ function dropDownChange(obj){
             //错误弹框
         }
     });
+}
+//会员中心地址栏
+$("#addNewAddress").click(function() {
+    $("#addressEdit").show()
+});
+$("#cancelAddEdit").click(function() {
+    $("#addressEdit").hide();
+});
+$("#myAddressList").delegate("a.bt_edit_address", "click",
+function(a) {
+    var b = $(this).prev("a").attr("id");
+    $("#addressEdit").show();
+    $("html,body").animate({
+        scrollTop: $("#addressEdit").top - 20
+    },
+    100);
+    modifyAddress(b, a)
+});
+function modifyAddress(c, b) {
+    var a = {
+        id: c
+    };
+    $.ajax({
+        url: "#",
+        type: "POST",
+        dataType: "json",
+        context: document.body,
+        data: a,
+        success: function(d) {
+            if (d.code == 0) {
+                $("#addressArea").html(d.data.area);
+                $("#newAddressId").val(d.data.info.id);
+                if (d.data.info.name != "") {
+                    $("#receiverName").val(d.data.info.name)//收件人
+                }
+                if (d.data.info.address != "") {
+                    $("#shipAddDetail").val(d.data.info.address)//收件地址
+                }
+                if (d.data.info.cell != "") {
+                    $("#receiverMobile").val(d.data.info.cell)//手机
+                }
+                if (d.data.info.phone != "") {
+                    $("#receiverPhone").val(d.data.info.phone)//固话
+                }
+            }
+        }
+    })
+}
+function clearForm() {
+    $("#newAddressId").val("");
+    $("#newAddressType").val("add");
+    $("#receiverName").val("");
+    $("#addressArea").find("option[value!='']").remove();
+    $("#shipAddDetail").val("");
+    $("#receiverMobile").val("");
+    $("#receiverPhone").val("")
+}
+function resetDelete() {
+    $("#myAddressList .bt_edit_del").confirm({
+    	//调用弹出
+        msg: "确定要删除此地址吗？",
+        onOK: function(b) {
+            var a = $(b.target);
+            var c = a.attr("id");
+            removeAddress(c, b)
+        },
+        onCancel: function() {}
+    })
+}
+function removeAddress(c, b) {
+    var a = {
+        id: c
+    };
+    $.ajax({
+        url: "#",
+        type: "POST",
+        dataType: "json",
+        context: document.body,
+        data: a,
+        success: function(d) {
+            if (d.code == 0) {
+            	//地址id
+                $("#myAddressList div#address_" + c).fadeOut("1500",
+                function() {
+                    $(this).remove();
+                })
+            }
+        }
+    })
 }

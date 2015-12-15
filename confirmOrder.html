@@ -47,8 +47,132 @@
             </div>
             <!--step-->
         </div>
-        <div> <div id="test">新增收货地址</div></div>
-        <div> <div id="test2">编辑收货地址</div></div>
+        <div class="confirm_ord_cont">
+            <div class="confirm_ord_list confirm_ord_receiver rela">
+                <strong>收货人信息</strong>
+                <a href="#" class="confirm_ord_btn" id="add_address">新增收货地址</a>
+                <ul>
+                    <li class="act"><span>[默认地址]</span>Yolanda 上海市普陀区金沙江路167号16号楼2楼 151****0000 <a href="#" class="confirm_ord_btn">编辑</a><a href="#" class="confirm_ord_btn">删除</a>
+                    </li>
+                    <li><span>[默认地址]</span>Yolanda 上海市普陀区金沙江路167号16号楼2楼 151****0000 <a href="#" class="confirm_ord_btn">编辑</a></li>
+                </ul>
+            </div>
+            <div class="confirm_ord_list">
+                <strong>配送信息</strong>
+                <ul>
+                    <li>快递 </li>
+                    <li>运费：￥5.00</li>
+                </ul>
+            </div>
+            <div class="confirm_ord_list">
+                <strong>支付方式</strong>
+                <ul>
+                    <li>
+                        <div class="confirm_ord_se_btn act">网银在线<i></i></div>
+                        <div class="confirm_ord_se_btn">支付宝<i></i></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="confirm_ord_list rela">
+                <strong>发票信息</strong>
+                <ul>
+                    <li>
+                        <div class="confirm_ord_se_btn act">不需要发票<i></i></div>
+                        <div class="confirm_ord_se_btn oct_invoice">个人发票<i></i></div>
+                        <div class="confirm_ord_se_btn oct_invoice">公司发票<i></i></div>
+                        <div class="confirm_ord_invoice_cont">
+                            <div class="member_info_item">
+                                <label class="member_info_label">发票抬头：</label>
+                                <span class="member_info_input_set">
+                                    <input class="member_info_input" type="text">
+                                </span>
+                            </div>
+                            <div class="member_info_item">
+                                <label class="member_info_label">发票内容：</label>
+                                <span class="member_info_input_set">
+                                    <select name="" class="member_info_sele">
+                                        <option></option>
+                                        <option value="商品清单">商品清单</option>
+                                        <option value="电器">电器</option>
+                                        <option value="办公用品">办公用品</option>
+                                        <option value="其它">其它</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="confirm_ord_list confirm_ord_pro">
+                <strong>商品清单</strong>
+                <ul>
+                    <li>
+                        <a class="confirm_ord_list_pic" target="_blank" href="product.html"><img src="images/test/small_83x83.jpg" alt=""></a>
+                        <div class="cart_pro_link">
+                            <a href="product.html" target="_blank">十月妈咪 孕妇装夏装2015韩版连衣孕妇装夏装2015韩版连衣</a>
+                            <div class="cart_ags">颜色分类：粉色 尺码：M</div>
+                        </div>
+                        <div class="confirm_ord_list_pri">
+                            <span class="cart_pri">￥198.00</span>
+                            <div>X 1</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="confirm_ord_list_pic" target="_blank" href="product.html"><img src="images/test/small_83x83.jpg" alt=""></a>
+                        <div class="cart_pro_link">
+                            <a href="product.html" target="_blank">十月妈咪 孕妇装夏装2015韩版连衣孕妇装夏装2015韩版连衣</a>
+                            <div class="cart_ags">颜色分类：粉色 尺码：M</div>
+                        </div>
+                        <div class="confirm_ord_list_pri">
+                            <span class="cart_pri">￥198.00</span>
+                            <div>X 1</div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="confirm_ord_remark">
+                    <label>添加订单备注</label>
+                    <input type="text" size="45" placeholder="限45字" />
+                    <span>提示：请勿填写有关支付、收货、发票方面的信息</span>
+                </div>
+            </div>
+            <div class="confirm_ord_list confirm_ord_preferential">
+                <strong>结算信息</strong>
+                <ul>
+                    <li class="act">
+                        <h5><i class="refresh_ico"></i>订单优惠</h5>
+                        <div class="preferential_cont">
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                        </div>
+                    </li>
+                    <li><h5><i class="refresh_ico"></i>使用优惠</h5>
+                        <div class="preferential_cont">
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                        </div>
+                    </li>
+                    <li><h5><i class="refresh_ico"></i>花生抵扣</h5>
+                        <div class="preferential_cont">
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart_total rela confirm_ord_total">
+                <div>商品总金额：<span class="cart_pri">￥198.00</span></div>
+                <div>运费(以计算页面为准)：<span class="cart_pri">￥0.00</span></div>
+                <div>(订单可得积分198)总金额：<span class="cart_pri">￥198.00</span></div>
+            </div>
+            <div class="cart_clearing confirm_ord_clearing">
+                <a href="#">返回购物车</a>
+                <a href="confirmOrder.html" class="cart_clearing_btn">提交订单</a>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
         require(['confirmOrder'])

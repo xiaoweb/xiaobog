@@ -2,6 +2,7 @@
 var require = {
     deps: ['lazyload','total']
 }
+/*数据储蓄对象构造函数*/
 function initData(data){
     this.data = data;
     this.change = function(obj){
@@ -13,5 +14,11 @@ function initData(data){
             k[t] = obj[t]
         }
         return k
+    }
+    this.save = function(obj){
+        for(var i in obj){
+            data[i] = obj[i]
+        }
+        return data
     }
 }

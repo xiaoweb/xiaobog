@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <meta name="author" content="mall.octmami.com">
+    <meta name="copyright" content="Copyright ©www.octmami.com 版权所有">
+    <meta name="revisit-after" content="1 days">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=0.23, minimum-scale=0, user-scalable=no">
+    <title>十月商城-十月妈咪官方商城_中国首家品牌联盟孕婴童商城</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/member.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/lazyload.js"></script>
+</head>
+<body>
+<!--top-->
+<!--会员模块 除登录注册页外 调用此头部-->
+<div class="top">
+    <div class="wd">
+        <div class="left">
+            <span>欢迎来到十月妈咪</span>
+        </div>
+        <div class="right">
+            <a href="login.html" class="login">登录</a>|
+            <a href="regist.html">注册</a>
+            <a href="#">我的订单</a>
+            <a href="http://m.octmami.com" class="m_shop">手机商城</a>
+            <a href="#" id="attention">关注商城<div class="qrcodeShow"></div></a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>
+        <!--login-->
+        <!--<div class="right">
+            <a href="#">你好，13111111111</a>
+            <a href="#">[退出]</a>
+            <a href="#">我的订单</a>
+            <a href="#" class="m_shop">手机商城</a>
+            <a href="#">关注商城</a>
+            <a target="_blank" href="#">防伪查询</a>
+            <a target="_blank" href="#" class="top_collect">收藏十月</a>
+            <a target="_blank" href="http://corp.octmami.com/">十月官网</a>
+            <a href="#" class="top_kefu">客服电话：4001-521-521</a>
+        </div>-->
+    </div>
+</div>
+<!--top-->
+<!--memberNav-->
+<div class="member_nav_set">
+    <div class="wd">
+        <div class="member_logo">
+            <a class="member_logo_link" href="index.html"></a>
+        </div>
+        <div class="member_nav_menu_set font">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="member.html">我的十月</a></li>
+                <li><a href="sales.html">十月闪购</a></li>
+                <li><a href="star.html">明星推荐</a></li>
+            </ul>
+        </div>
+        <div class="fr">
+            <div class="cat rela">
+                <a target="_blank" href="#"><div class="content"><i class="member_cart_icon"></i>我的购物车<span>&gt;</span></div></a>
+                <div class="member_cart_number ajax_cart_number">3</div>
+            </div>
+            <div class="member_serverSlg_set">
+                <ul>
+                    <li>
+                        <a class="unit_1" href=""></a>
+                    </li>
+                    <li>
+                        <a class="unit_2" href=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--memberNav-->
+<!--member-->
+<div class="wd main">
+    <!--左侧栏-->
+    <div class="mb_left_side_box">
+        <div class="mb_left_menu_box">
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    交易管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberOrders.html" class="mb_left_menu_link">我的订单</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">申请退换货</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    评论咨询管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberNoCmt.html" class="mb_left_menu_link">未评论商品</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberMyCmt.html" class="mb_left_menu_link">评论与咨询</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set">
+                <dt class="mb_left_menu_title">
+                    我的账户
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="memberFav.html" class="mb_left_menu_link">商品收藏</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的优惠券</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="couponExchange.html" class="mb_left_menu_link">积分兑换优惠券</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="" class="mb_left_menu_link">我的花生</a>
+                </dd>
+            </dl>
+            <dl class="mb_left_menu_set last">
+                <dt class="mb_left_menu_title">
+                    个人信息管理
+                </dt>
+                <dd class="mb_left_menu_content">
+                    <a href="myInfo.html" class="mb_left_menu_link">我的消息</a>
+                    <i>(4)</i>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="memberInfo.html" class="mb_left_menu_link">个人信息</a>
+                </dd>
+                <dd class="mb_left_menu_content">
+                    <a href="safeCenter.html" class="mb_left_menu_link">安全中心</a>
+                </dd>
+                <dd class="mb_left_menu_content current">
+                    <a href="" class="mb_left_menu_link">收货地址</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--左侧栏-->
+    <!--右侧主区域-->
+    <div class="mb_right_content">
+        <!--近期订单-->
+        <div class="member_orders_nbox mb15">
+            <div class="member_orders_box_label font">
+                <div class="fl">收货地址</div>
+                <div class="fr">
+                    <a id="addNewAddress" class="bt_26_green" href="javascript:void(0)">新增</a>
+                </div>
+            </div>
+            <!--地址为空时 member_orders_empty_box替代member_orders_set-->
+            <!--div class="empty_box">
+                <div class="empty_icon"></div>
+                <div class="empty_words_b font">您还未编辑收货地址哦~</div>
+                <div class="empty_words_link">您可以：
+                    <a href="index.html" class="font_green">点击新增</a>
+                </div>
+            </div-->
+            <!--地址为空时 member_orders_empty_box替代member_orders_set-->
+            <div id="addressEdit" class="member_address_edit_set mb15">
+                <form action="" method="post">
+                    <div class="member_info_item">
+                        <label class="member_info_label"><i class="member_info_label_star">*</i>收货人：</label>
+                        <span class="member_info_input_set">
+                            <input id="newAddressId" value="123" type="hidden">
+                            <input id="newAddressType" value="add" type="hidden" />
+                            <input id="receiverName" class="member_info_input" name="" value="" type="text">
+                        </span>
+                    </div>
+                    <div class="member_info_item">
+                        <label class="member_info_label"><i class="member_info_label_star">*</i>移动电话：</label>
+                        <span class="member_info_input_set"><input id="receiverMobile" class="member_info_input" name="" value="" type="text"></span>
+                    </div>
+                    <div class="member_info_item">
+                        <label class="member_info_label">固定电话：</label>
+                        <span class="member_info_input_set"><input id="receiverPhone" class="member_info_input" name="" value="" type="text"></span>
+                    </div>
+                    <div id="addressArea" class="member_info_item">
+                        <label class="member_info_label"><i class="member_info_label_star">*</i>所在地区：</label>
+                        <span class="member_info_input_set">
+                            <select name="" class="member_info_sele" id="province">
+                                <option value="0" disabled="" selected="selected">
+                                    请选择：
+                                </option>
+                                <option value="2004">
+                                    2004
+                                </option>
+                            </select>
+                            <select name="" class="member_info_sele" id="city">
+                                <option value="0" disabled="" selected="selected">
+                                    请选择：
+                                </option>
+                                <option value="1">
+                                    1
+                                </option>
+                                <option value="2">
+                                    2
+                                </option>
+                            </select>
+                            <select name="" class="member_info_sele" id="county">
+                                <option value="1">
+                                    1
+                                </option>
+                                <option value="2">
+                                    2
+                                </option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="member_info_item">
+                        <label class="member_info_label"><i class="member_info_label_star">*</i>联系地址：</label>
+                        <span class="member_info_input_set"><input id="shipAddDetail" class="member_info_input" name="" value="" type="text"></span>
+                    </div>
+                    <div class="member_info_item">
+                        <label class="member_info_label"></label>
+                        <span class="member_info_input_set">
+                            <a id="saveAddEdit" class="bt_30_green mr10" href="javascript:;">保存</a>
+                            <a id="cancelAddEdit" class="bt_30_green" href="javascript:;">取消</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div id="myAddressList" class="member_orders_set_brief">
+                <table id="address_123" class="member_address_box mb15" width="100%">
+                    <tr class="member_address_title_row">
+                        <td colspan="2">
+                            <span class="member_address_title">地址 小白</span>
+                            <a class="member_address_oper" href="">设为默认</a>
+                            <a id="123" class="member_address_oper bt_edit_del" href="javascript:;">删除</a>
+                            <a class="member_address_oper bt_edit_address" href="javascript:;">编辑</a>
+                        </td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">收货人：</td>
+                        <td width="850">小白</td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">详细地址：</td>
+                        <td>小白小白小白小白小白小白小白小白小白小白小白小白小白</td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">手机：</td>
+                        <td>13000000000</td>
+                    </tr>
+                </table>
+                <table id="address_124" class="member_address_box mb15" width="100%">
+                    <tr class="member_address_title_row">
+                        <td colspan="2">
+                            <span class="member_address_title">地址 小白</span>
+                            <a class="member_address_oper" href="">设为默认</a>
+                            <a id="124" class="member_address_oper bt_edit_del" href="javascript:;">删除</a>
+                            <a class="member_address_oper bt_edit_address" href="javascript:;">编辑</a>
+                        </td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">收货人：</td>
+                        <td width="850">小白</td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">详细地址：</td>
+                        <td>小白小白小白小白小白小白小白小白小白小白小白小白小白</td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">手机：</td>
+                        <td>13000000000</td>
+                    </tr>
+                </table>
+                <table id="address_125" class="member_address_box" width="100%">
+                    <tr class="member_address_title_row">
+                        <td colspan="2">
+                            <span class="member_address_title">地址 小白</span>
+                            <a class="member_address_oper" href="">设为默认</a>
+                            <a id="125" class="member_address_oper bt_edit_del" href="javascript:;">删除</a>
+                            <a class="member_address_oper bt_edit_address" href="javascript:;">编辑</a>
+                        </td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">收货人：</td>
+                        <td width="850">小白</td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">详细地址：</td>
+                        <td>小白小白小白小白小白小白小白小白小白小白小白小白小白</td>
+                    </tr>
+                    <tr class="member_address_content_row">
+                        <td class="row_1">手机：</td>
+                        <td>13000000000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--近期订单-->
+        <!--收藏-->
+        <div class="member_orders_box mb15">
+            <div class="member_orders_box_label font mb10">
+                <div class="fl">我的收藏</div>
+                <div class="fr">
+                    <a href="" class="member_label_rt_menu">查看所有收藏</a>
+                </div>
+            </div>
+            <div class="member_fav_box mb10">
+                <ul class="member_fav_set">
+                    <li class="member_fav_item">
+                        <a href="" target="_blank">
+                            <div class="member_fav_pic"><img src="images/test/b_pic22.jpg" width="180" height="180" title="test1" /></div>
+                            <div class="member_fav_name">儿童内衣套装纯棉女童秋衣秋裤韩国女宝宝全棉毛衫睡衣家</div>
+                            <div class="member_fav_price font_price">￥88.00</div>
+                        </a>
+                    </li>
+                    <li class="member_fav_item">
+                        <a href="" target="_blank">
+                            <div class="member_fav_pic"><img src="images/test/b_pic22.jpg" width="180" height="180" title="test1" /></div>
+                            <div class="member_fav_name">儿童内衣套装纯棉女童秋衣秋裤韩国女宝宝全棉毛衫睡衣家</div>
+                            <div class="member_fav_price font_price">￥88.00</div>
+                        </a>
+                    </li>
+                    <li class="member_fav_item">
+                        <a href="" target="_blank">
+                            <div class="member_fav_pic"><img src="images/test/b_pic22.jpg" width="180" height="180" title="test1" /></div>
+                            <div class="member_fav_name">儿童内衣套装纯棉女童秋衣秋裤韩国女宝宝全棉毛衫睡衣家</div>
+                            <div class="member_fav_price font_price">￥88.00</div>
+                        </a>
+                    </li>
+                    <li class="member_fav_item">
+                        <a href="" target="_blank">
+                            <div class="member_fav_pic"><img src="images/test/b_pic22.jpg" width="180" height="180" title="test1" /></div>
+                            <div class="member_fav_name">儿童内衣套装纯棉女童秋衣秋裤韩国女宝宝全棉毛衫睡衣家</div>
+                            <div class="member_fav_price font_price">￥88.00</div>
+                        </a>
+                    </li>
+                    <li class="member_fav_item">
+                        <a href="" target="_blank">
+                            <div class="member_fav_pic"><img src="images/test/b_pic22.jpg" width="180" height="180" title="test1" /></div>
+                            <div class="member_fav_name">儿童内衣套装纯棉女童秋衣秋裤韩国女宝宝全棉毛衫睡衣家</div>
+                            <div class="member_fav_price font_price">￥88.00</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--收藏-->
+        <!--广告-->
+        <div>
+            <a href=""><img src="images/pic_help_center_adv_01.jpg" width="1013" /></a>
+        </div>
+        <!--广告-->
+    </div>
+    <!--右侧主区域-->
+</div>
+<!--member-->
+<script src="js/member.js"></script>
+</body>
+</html>
