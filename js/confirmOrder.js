@@ -60,9 +60,9 @@ define(['open'], function (open) {
     //initData 临时数据储存
     var addressData ={
         consignee: '',
-        province: '',
-        city: '',
-        county: '',
+        province: '上海',
+        city: '上海市',
+        county: '普陀区',
         address: '',
         mobile: '',
         phone: '',
