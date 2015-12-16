@@ -6,14 +6,16 @@ define(['jquery','areaData'],function($,data){
         if(!province.length){return }
         var city = this.find(".city");
         var county = this.find(".county");
+        var Reg = /市|省|自治区|壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区/;
         function eachData(ele,data){
             ele.find('option').eq(0).nextAll().remove();
             $(data).each(function(i,t){
                 if(ele === province){
-                    var Reg = /市|省|自治区|壮族自治区|回族自治区|维吾尔自治区|自治区/;
                     if(Reg.test(t.name)){
                         var str = t.name;
                         ele.append('<option>'+ str.replace(Reg,"")+'</option>')
+                    }else{
+                        ele.append('<option>'+ t.name+'</option>')
                     }
                 }else{
                     ele.append('<option>'+ t.name+'</option>')
@@ -41,9 +43,9 @@ define(['jquery','areaData'],function($,data){
         if(option.province){
             var indexArr = [];
             $(data).each(function(i,t){
-                if(t.name == option.province){
+                if(t.name.indexOf(option.province) == 0 ){
                     indexArr.push(i);
-                    if(option.province != option.city){
+                    if(option.city.indexOf(option.province) != 0){
                         $(t.children).each(function(i,t){
                             if(t.name == option.city){
                                 indexArr.push(i);
@@ -69,11 +71,7 @@ define(['jquery','areaData'],function($,data){
             })
             province[0].options[indexArr[0]+1].selected = true;
             province.change();
-            if(option.province == option.city){
-                city[0].options[1].selected = true;
-            }else{
-                city[0].options[indexArr[1]+1].selected = true;
-            }
+            city[0].options[indexArr[1]+1].selected = true;
             city.change();
             county[0].options[(indexArr[2] || indexArr[1]) +1].selected = true;
             county.change();

@@ -667,7 +667,7 @@ td.member_orders_box_img{
 	height: 28px;
 	line-height: 28px;
 	border:1px solid #ccc;
-	padding: 0;
+	padding: 0 5px;
 }
 .member_info_item select{
 	line-height: 18px;
@@ -1656,3 +1656,22 @@ td.member_orders_box_img{
 	line-height: 22px;
 }
 /*会员中心提示信息*/
+body .custom-layer-style{
+	background:rgba(0, 0, 0, .1);
+	padding:4px;
+	border-radius:2px;
+	box-shadow:none;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#44000000, endColorstr=#44000000);
+}
+
+body .custom-layer-style .layui-layer-content{
+	padding:20px 40px;
+	background:#fff;
+}
+
+.member_orders_set_brief{background:#f6f6f6;padding:10px;border:1px solid #e5e5e5;}
+.member_address_title_row{}
+.member_default_address{color:#ff6600;font-weight:bold;display:none;}
+.member_default_address.act{display:inline;}
+.member_address_box.act{background:#eee;}
+.member_address_box.act .member_default_address{display:inline;}

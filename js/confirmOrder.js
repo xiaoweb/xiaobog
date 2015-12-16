@@ -1,64 +1,94 @@
 /** * Created with WebStorm. * User: RD-小小WEB * Date: 2015/12/11 * Time: 15:16 */
-define(['open'],function(open){
+define(['open'], function (open) {
     //单选按钮样式切换
-    $(".confirm_ord_se_btn").on('click',function(){
-        if(!$(this).hasClass('act')){
+    $(".confirm_ord_se_btn").on('click', function () {
+        if (!$(this).hasClass('act')) {
             $(this).addClass('act').siblings(".act").removeClass('act');
         }
-        if($(this).hasClass('oct_invoice')){
+        if ($(this).hasClass('oct_invoice')) {
             $(this).siblings(".confirm_ord_invoice_cont").addClass("act");
-        }else{
+        } else {
             $(this).siblings(".confirm_ord_invoice_cont").removeClass("act");
         }
     });
     //优惠信息切换
-    $('.confirm_ord_preferential li h5').on('click',function(){
+    $('.confirm_ord_preferential li h5').on('click', function () {
         $(this).parents("li").toggleClass('act');
     })
-    //默认地址
-    $(".confirm_ord_receiver li").on('click',function(){
-        if(!$(this).hasClass('act')){
-            $(this).addClass('act').siblings('li.act').removeClass('act');
-        }
+
+
+    /*默认地址*/
+    //hover效果
+    var addressLi = $(".confirm_ord_list ul");
+    addressLi.on('mouseenter','li',function () {
+        $(this).addClass('hover');
+    });
+    addressLi.on('mouseleave','li',function () {
+        $(this).removeClass('hover');
+    })
+
+    //设为默认效果
+    addressLi.on('click','.set_default', function () {
+        $(this).parents("li").addClass("act").siblings("li.act").removeClass('act');
+    })
+
+    //删除地址事件
+    addressLi.on('click','.delect_address', function () {
+        var that = this;
+        layer.confirm('确认删除收货地址？', {icon: 3}, function () {
+            // 删除地址代码 。。。。。。
+            $(that).parents("li").remove();
+            layer.msg('删除地址成功', {icon: 1});
+            //layer.msg('删除地址失败', {icon: 2});
+        })
+    })
+
+    //优惠券显示切换
+    $('.confirm_ord_coupon_tab div').on('click',function(){
+        $(this).addClass('act').siblings("div.act").removeClass('act');
+        $('.preferential_cont .confirm_ord_coupon_cont').eq($(this).index()).addClass("act").siblings(".act").removeClass("act")
+    })
+    //输入优惠券
+    $('.toggle_enter').on('click',function(){
+        $(this).next('.con_ord_cou_enter').toggleClass('act');
+        return false;
     })
 
 
 
     /**************************弹窗的例子**************************/
-    //initData 只个数据储存对象构造器
-    var addressData = new initData({
-        consignee : '',
-        province : '',
-        city : '',
-        county:'',
-        address:'',
-        mobile : '',
-        phone : '',
-        zipCode :''
-    })
+    //initData 临时数据储存
+    var addressData ={
+        consignee: '',
+        province: '',
+        city: '',
+        county: '',
+        address: '',
+        mobile: '',
+        phone: '',
+        zipCode: ''
+    }
     //添加收货人
-    open.open({
-        element : "#add_address",  //触发元素
-        title:'添加收货人',        //弹窗title
-        tpl: 'address.html',       //模板
-        datas : addressData.data,  //填入的数据
-        //模板中含有class为custom-layer-btn按钮的事件,将弹窗检视的数据与dom绑定在了这个方法的this上
-        fn : function(index,element /*this:监视的数据与DOM；index：弹层的索引；element:这个弹层的DOM*/){
-            console.log(this,this.data,this.element,index,element);
-            //layer.close(index);  //关闭当前弹层
-            return false;      //返回false 不执行元素默认事件
-        }
-    })
-    //编辑窗口
-    $(".confirm_ord_receiver li .confirm_ord_btn").each(function(i,t){
+    $('#add_address').on('click',function(){
         open.open({
-            element : t,
-            title:'添加收货人',
+            title: '添加收货人',
             tpl: 'address.html',
-            datas : addressData.change({
-                consignee: t.innerHTML
-            }),
-            fn : function(index){
+            datas: addressData,
+            fn: function (index,element) {
+                layer.close(index);
+                return false;
+            }
+        })
+    })
+    /**/
+    //编辑窗口
+    addressLi.on('click','.set_address', function () {
+        open.open({
+            title: '添加收货人',
+            tpl: 'address.html',
+            datas: addressData,
+            fn: function (index) {
+                console.log(this);
                 layer.close(index);
                 return false;
             }

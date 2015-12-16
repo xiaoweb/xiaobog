@@ -19,8 +19,10 @@
     <title>十月商城-十月妈咪官方商城_中国首家品牌联盟孕婴童商城</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/member.css"/>
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/lazyload.js"></script>
+    <script type="text/javascript" src="js/plugin/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 <!--top-->
@@ -172,7 +174,7 @@
                 </div>
             </div-->
             <!--地址为空时 member_orders_empty_box替代member_orders_set-->
-            <div id="addressEdit" class="member_address_edit_set mb15">
+           <!-- <div id="addressEdit" class="member_address_edit_set mb15">
                 <form action="" method="post">
                     <div class="member_info_item">
                         <label class="member_info_label"><i class="member_info_label_star">*</i>收货人：</label>
@@ -234,15 +236,16 @@
                         </span>
                     </div>
                 </form>
-            </div>
+            </div>-->
             <div id="myAddressList" class="member_orders_set_brief">
                 <table id="address_123" class="member_address_box mb15" width="100%">
                     <tr class="member_address_title_row">
                         <td colspan="2">
                             <span class="member_address_title">地址 小白</span>
-                            <a class="member_address_oper" href="">设为默认</a>
+                            <a class="member_address_oper set_address_default" href="">设为默认</a>
                             <a id="123" class="member_address_oper bt_edit_del" href="javascript:;">删除</a>
-                            <a class="member_address_oper bt_edit_address" href="javascript:;">编辑</a>
+                            <a class="member_address_oper bt_edit_address" href="javascript:void(0);">编辑</a>
+                            <span class="member_default_address">[默认地址] </span>
                         </td>
                     </tr>
                     <tr class="member_address_content_row">
@@ -262,9 +265,10 @@
                     <tr class="member_address_title_row">
                         <td colspan="2">
                             <span class="member_address_title">地址 小白</span>
-                            <a class="member_address_oper" href="">设为默认</a>
+                            <a class="member_address_oper set_address_default" href="">设为默认</a>
                             <a id="124" class="member_address_oper bt_edit_del" href="javascript:;">删除</a>
-                            <a class="member_address_oper bt_edit_address" href="javascript:;">编辑</a>
+                            <a class="member_address_oper bt_edit_address" href="javascript:void(0)">编辑</a>
+                            <span class="member_default_address">[默认地址] </span>
                         </td>
                     </tr>
                     <tr class="member_address_content_row">
@@ -284,9 +288,10 @@
                     <tr class="member_address_title_row">
                         <td colspan="2">
                             <span class="member_address_title">地址 小白</span>
-                            <a class="member_address_oper" href="">设为默认</a>
+                            <a class="member_address_oper set_address_default" href="">设为默认</a>
                             <a id="125" class="member_address_oper bt_edit_del" href="javascript:;">删除</a>
-                            <a class="member_address_oper bt_edit_address" href="javascript:;">编辑</a>
+                            <a class="member_address_oper bt_edit_address" href="javascript:void(0)">编辑</a>
+                            <span class="member_default_address">[默认地址] </span>
                         </td>
                     </tr>
                     <tr class="member_address_content_row">
@@ -363,6 +368,8 @@
     <!--右侧主区域-->
 </div>
 <!--member-->
-<script src="js/member.js"></script>
+<script type="text/javascript">
+    require(['member'])
+</script>
 </body>
 </html>

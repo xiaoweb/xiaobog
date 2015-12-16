@@ -91,4 +91,8 @@ define(["jquery","easyzoom","lazyload"],function($){   //首个参数为一个�
     });
 })
 
+require(['layer'],function(layer){
+    layer.msg("123")
+})
+
 

@@ -33,5 +33,5 @@ require.config({
         index:['jquery','unslider','listslide'], //首页
         cart: ['layer'] //购物车JS
     },
-    waitSeconds: 30//加载超时时间
+    waitSeconds: 30 //加载超时时间
 });

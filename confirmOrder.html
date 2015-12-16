@@ -48,15 +48,28 @@
             <!--step-->
         </div>
         <div class="confirm_ord_cont">
+            <!--收货地址-->
             <div class="confirm_ord_list confirm_ord_receiver rela">
                 <strong>收货人信息</strong>
                 <a href="#" class="confirm_ord_btn" id="add_address">新增收货地址</a>
                 <ul>
-                    <li class="act"><span>[默认地址]</span>Yolanda 上海市普陀区金沙江路167号16号楼2楼 151****0000 <a href="#" class="confirm_ord_btn">编辑</a><a href="#" class="confirm_ord_btn">删除</a>
+                    <li class="act"><span>[默认地址]</span>Yolanda 上海市普陀区金沙江路167号16号楼2楼 151****0000
+                        <div class="confirm_address_btn abso">
+                            <a href="#" class="set_default">设为默认</a>
+                            <a href="#" class="set_address">编辑</a>
+                            <a href="#" class="delect_address">删除</a>
+                        </div>
                     </li>
-                    <li><span>[默认地址]</span>Yolanda 上海市普陀区金沙江路167号16号楼2楼 151****0000 <a href="#" class="confirm_ord_btn">编辑</a></li>
+                    <li><span>[默认地址]</span>Yolanda 上海市普陀区金沙江路167号16号楼2楼 151****0000
+                        <div class="confirm_address_btn abso">
+                            <a href="#" class="set_default">设为默认</a>
+                            <a href="#" class="set_address">编辑</a>
+                            <a href="#" class="delect_address">删除</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
+            <!--配送信息-->
             <div class="confirm_ord_list">
                 <strong>配送信息</strong>
                 <ul>
@@ -64,6 +77,7 @@
                     <li>运费：￥5.00</li>
                 </ul>
             </div>
+            <!--支付方式-->
             <div class="confirm_ord_list">
                 <strong>支付方式</strong>
                 <ul>
@@ -73,6 +87,7 @@
                     </li>
                 </ul>
             </div>
+            <!--发票信息-->
             <div class="confirm_ord_list rela">
                 <strong>发票信息</strong>
                 <ul>
@@ -103,6 +118,7 @@
                     </li>
                 </ul>
             </div>
+            <!--商品清单-->
             <div class="confirm_ord_list confirm_ord_pro">
                 <strong>商品清单</strong>
                 <ul>
@@ -136,36 +152,105 @@
                     <span>提示：请勿填写有关支付、收货、发票方面的信息</span>
                 </div>
             </div>
+            <!--结算优惠信息-->
             <div class="confirm_ord_list confirm_ord_preferential">
                 <strong>结算信息</strong>
                 <ul>
-                    <li class="act">
+                    <li>
                         <h5><i class="refresh_ico"></i>订单优惠</h5>
                         <div class="preferential_cont">
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span class="focus_text">[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span class="focus_text">[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <label><input type="checkbox" name="1" /><span class="focus_text">[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
                         </div>
                     </li>
                     <li><h5><i class="refresh_ico"></i>使用优惠</h5>
+                        <div class="confirm_ord_coupon_tab">
+                            <div class="act">可用优惠券 <b>(1)</b></div>
+                            <div>不可用优惠券 <b>(7)</b></div>
+                        </div>
                         <div class="preferential_cont">
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <div class="confirm_ord_coupon_cont act">
+                                <div class="confirm_ord_coupon_list">
+                                    <dl>
+                                        <dd>
+                                            <label>
+                                                <input type="checkbox" /> <b>20元</b>
+                                                <span>仅可购买金奇仕自营指...</span>
+                                                <span>有效期至2015-12-31 </span>
+                                            </label>
+                                        </dd>
+                                        <dd>
+                                            <label>
+                                                <input type="checkbox" /> <b>20元</b>
+                                                <span>仅可购买金奇仕自营指...</span>
+                                                <span>有效期至2015-12-31 </span>
+                                            </label>
+                                        </dd>
+                                        <dd>
+                                            <label>
+                                                <input type="checkbox" /> <b>20元</b>
+                                                <span>仅可购买金奇仕自营指...</span>
+                                                <span>有效期至2015-12-31 </span>
+                                            </label>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="confirm_ord_coupon_list">
+                                    此订单暂无可用的优惠券。 您可以 <a href="#">查看所有优惠券</a>了解使用限制。
+                                </div>
+                                <div class="confirm_ord_coupon_list">
+                                    有优惠券兑换码？ <a href="#" class="toggle_enter">[点击输入兑换码]</a>
+                                    <div class="con_ord_cou_enter">
+                                        <label>请输入您手中的兑换码：<input type="text" size="30" /> <a href="#" class="bt_26_green">使用</a></label>
+                                    </div>
+                                </div>
+                                <div class="confirm_ord_coupon_list con_ord_cou_to">
+                                    共使用了 <b>0</b> 张优惠券　可以优惠 <b>0.00</b> 元
+                                </div>
+                            </div>
+                            <div class="confirm_ord_coupon_cont">
+                                <div class="confirm_ord_coupon_list con_ord_cou_unavailable">
+                                    <dl>
+                                        <dd>
+                                            <label>
+                                                <input type="checkbox" disabled /> <b>20元</b>
+                                                <span>仅可购买金奇仕自营指...</span>
+                                                <span>有效期至2015-12-31 </span>
+                                            </label>
+                                        </dd>
+                                        <dd>
+                                            <label>
+                                                <input type="checkbox" disabled /> <b>20元</b>
+                                                <span>仅可购买金奇仕自营指...</span>
+                                                <span>有效期至2015-12-31 </span>
+                                            </label>
+                                        </dd>
+                                        <dd>
+                                            <label>
+                                                <input type="checkbox" disabled /> <b>20元</b>
+                                                <span>仅可购买金奇仕自营指...</span>
+                                                <span>有效期至2015-12-31 </span>
+                                            </label>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li><h5><i class="refresh_ico"></i>花生抵扣</h5>
                         <div class="preferential_cont">
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
-                            <label><input type="checkbox" name="1" /><span>[满赠]</span>活动商品够慢129.00元，即可领取赠品，先到先得。</label>
+                            <div>(共63个花生，本次可用 63个花生) <a href="#">[点击了解花生规则]</a></div>
+                            使用花生<input class="peanut_number" type="number" />个，可抵扣 <b class="cart_pri">￥0元</b> <a href="#" class="bt_26_green">使用</a>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="cart_total rela confirm_ord_total">
                 <div>商品总金额：<span class="cart_pri">￥198.00</span></div>
-                <div>运费(以计算页面为准)：<span class="cart_pri">￥0.00</span></div>
+                <div>+运费：<span class="cart_pri">￥5.00</span></div>
+                <div>-花生抵扣<span class="cart_pri">￥5.00</span></div>
+                <div>-订单优惠金额<span class="cart_pri">￥5.00</span></div>
                 <div>(订单可得积分198)总金额：<span class="cart_pri">￥198.00</span></div>
             </div>
             <div class="cart_clearing confirm_ord_clearing">
