@@ -4,9 +4,17 @@
 var koa = require('koa'),
     app = koa();
 
-app.use(function*(next){
+app.use(function*(next) {
     this.body = "hello world";
-    console.log(this.originalUrl );
+    yield next;
+    console.log(this.url)
 });
-app.listen(80);
-app.listen(443)
+
+app.use(function*() {
+    this.body = '123'
+})
+
+app.use(function*() {
+
+})
+app.listen(3000);
