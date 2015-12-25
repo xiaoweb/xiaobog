@@ -6,8 +6,8 @@ var koa = require('koa'),
 
 app.use(function*(next) {
     this.body = "hello world";
-    yield next;
-    console.log(this.url)
+yield next;
+console.log(this.url)
 });
 
 app.use(function*() {
