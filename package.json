@@ -1,0 +1,30 @@
+{
+  "name": "xiaowebblog",
+  "version": "1.0.0",
+  "description": "基于KOAJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoweb/xiaowebblog.git"
+  },
+  "author": "小小WEB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoweb/xiaowebblog/issues"
+  },
+  "homepage": "https://github.com/xiaoweb/xiaowebblog#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jade": "^1.11.0",
+    "koa": "^1.1.2",
+    "koa-router": "^5.3.0",
+    "mongoose": "^4.3.4"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.3.17"
+  }
+}
