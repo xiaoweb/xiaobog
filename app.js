@@ -7,15 +7,8 @@ var koa = require('koa'),
     fs = require('fs'),
     mongoose = require('mongoose');
 
-//环境 NODE ENV || development || production
-app.env = 'production';
-
-
-var test  ;
-//test
-app.use(function*(next){
-    yield next.next();
-})
+//环境 NODE_ENV || development || production
+app.env = 'NODE_ENV';
 
 //日志
 app.use(function *(next) {
@@ -30,7 +23,7 @@ app.use(function *(next) {
 //模板引擎
 app.use(function*(next) {
     !this.res.render && (this.res.render = function (template, data) {
-        return jade.compileFile(__dirname + '/views/' + template + '.jade', {pretty: true})(data)
+        return jade.compileFile(__dirname + '/views/' + template + '.jade', {pretty: false})(data)
     })
     yield next;
 })
@@ -39,7 +32,7 @@ app.use(function*(next) {
 routes(router);
 app.use(router.routes())
 
-mongoose.connect('mongodb://xiaowebblog:123456@192.168.1.103:27017/xiaoweb',function(err){
+mongoose.connect('mongodb://xiaowebblog:123456@128.128.9.27:27017/xiaoweb',function(err){
     if(err){
         console.log(err);
     } else{
