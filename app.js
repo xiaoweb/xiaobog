@@ -5,10 +5,14 @@ var koa = require('koa'),
     jade = require('jade'),
     routes = require('./routes'),
     fs = require('fs'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    static = require('./static');
 
 //环境 NODE_ENV || development || production
 app.env = 'NODE_ENV';
+
+//静态文件服务
+app.use(static("public"));
 
 //日志
 app.use(function *(next) {
@@ -32,7 +36,7 @@ app.use(function*(next) {
 routes(router);
 app.use(router.routes())
 
-mongoose.connect('mongodb://xiaowebblog:123456@128.128.9.27:27017/xiaoweb',function(err){
+mongoose.connect('mongodb://xiaowebblog:123456@192.168.1.101:27017/xiaoweb',function(err){
     if(err){
         console.log(err);
     } else{
