@@ -8,6 +8,6 @@ module.exports = function *(next) {
 
    var data = yield Users.find().exec();
     if(data){
-        this.body = this.res.render('user',{val:data})
+        this.body = this.res.render('user/user',{val:data})
     }
 }
