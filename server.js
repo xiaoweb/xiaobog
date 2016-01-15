@@ -10,7 +10,8 @@ var koa = require('koa'),
     mongoose = require('mongoose'),
     path = require('path'),
     static = require('koa-static-cache'),
-    parse = require('co-body');
+    parse = require('co-body'),
+    session = require('koa-session');
 
 //环境 NODE_ENV || development || production
 app.env = 'NODE_ENV';
@@ -24,9 +25,6 @@ app.use(function*(next) {
     }
 })
 
-//静态文件服务
-app.use(static(path.join(__dirname, 'public')));
-
 //日志
 app.use(function *(next) {
     var time = new Date();
@@ -36,6 +34,14 @@ app.use(function *(next) {
         err ? console.error(err) : app.env == "development" && console.info(log);
     })
 });
+
+//session
+app.use(session(app));
+app.keys = ['小小web'];
+
+//静态文件服务
+app.use(static(path.join(__dirname, 'public')));
+
 
 //模板引擎
 app.use(function*(next) {
@@ -67,13 +73,13 @@ routes(router);
 app.use(router.routes());
 
 //连接数据库
- mongoose.connect('mongodb://xiaoweb:111111@ds061701.mongolab.com:61701/xiaoweb', function (err) {
- if (err) {
- console.log(err);
- } else {
- console.log("连接成功")
- }
- });
+mongoose.connect('mongodb://xiaoweb:11111@ds061701.mongolab.com:61701/xiaoweb', function (err) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("连接成功")
+    }
+});
 
 var options = {
     key: fs.readFileSync(__dirname + '/xiaoweb.cn.pem'),
