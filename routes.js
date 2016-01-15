@@ -2,7 +2,6 @@
 var index = require('./routes/index'),
     user = require('./routes/user'),
     login = require('./routes/login');
-    video = require('./routes/video');
 
 function routes(router) {
     //首页
